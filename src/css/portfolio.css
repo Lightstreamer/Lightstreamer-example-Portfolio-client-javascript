@@ -1,0 +1,162 @@
+/*
+ * LIGHTSTREAMER - www.lightstreamer.com
+ * Portfolio Demo
+ */
+a {
+  color: #ffffff;
+}
+body {
+  background-color: black;
+  color: white;
+}
+.demoTitle {
+  font-family: Verdana, Arial, Helvetica, Sans-serif;
+  font-size: 9pt;
+  color: #ffffff;
+  font-weight: bold;
+  text-align: right;
+}
+.tableTitle {
+  font-family: Sans-serif;
+  font-size: 7pt;
+  color: #ffffff;
+  background-color: #336600;
+  font-weight: bold;
+  text-align: center;
+}
+.tableTitleSorted {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 7pt;
+  color: #ffffff;
+  background: #00cc00;
+  font-weight: bold;
+  text-align: center;
+}
+.inputPanel {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 7pt;
+  color: #ffffff;
+  background: #cc0000;
+  background-color: #cc0000;
+  font-weight: bold;
+  text-align: left;
+  vertical-align: middle
+}
+.note {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 8pt;
+  color: #00ff00;
+  font-weight: normal;
+  text-align: left;
+}
+.tablerow {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 8pt;
+  color: #000000;
+  background: #ddffaa;
+  font-weight: normal;
+  text-align: right;
+  nowrap: nowrap;
+}
+.lshot {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 8pt;
+  color: #000000;
+  background: #ffff66;
+  font-weight: normal;
+  text-align: right;
+}
+.lscold {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 8pt;
+  color: #000000;
+  font-weight: normal;
+  text-align: right;
+  nowrap: nowrap;
+}
+.lshotl {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 8pt;
+  color: #000000;
+  background: #ffff66;
+  font-weight: bold;
+  text-align: left;
+}
+.lscoldl {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 8pt;
+  color: #000000;
+  font-weight: bold;
+  text-align: left;
+}
+.lshotc {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 8pt;
+  color: #000000;
+  background: #ffff66;
+  font-weight: normal;
+  text-align: center;
+}
+.lscoldc {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 8pt;
+  color: #000000;
+  font-weight: normal;
+  text-align: center;
+}
+.lshotln {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 8pt;
+  color: #000000;
+  background: #ffff66;
+  font-weight: normal;
+  text-align: left;
+}
+.lscoldln {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 8pt;
+  color: #000000;
+  font-weight: normal;
+  text-align: left;
+}
+.lshotq {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 8pt;
+  color: #000000;
+  background: #ffff66;
+  font-weight: bold;
+  text-align: right;
+}
+.lscoldq {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 8pt;
+  color: #000000;
+  font-weight: bold;
+  text-align: right;
+}
+.lshottitle {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 8pt;
+  color: #000000;
+  background: #ffff66;
+  font-weight: bold;
+  text-align: left;
+}
+.lscoldtitle {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 8pt;
+  color: #336600;
+  background: #8ffe89;
+  font-weight: bold;
+  text-align: left;
+}
+#wrap { 
+  width: 460px; 
+  margin: 0 auto; 
+}
+tr:nth-child(2n+2) {
+  background: #ddffaa;
+} 
+tr:nth-child(2n+3) {
+  background: #f2ffe0;
+}

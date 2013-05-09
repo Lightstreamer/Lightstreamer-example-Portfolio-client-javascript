@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<!--
+  LIGHTSTREAMER - www.lightstreamer.com
+  Portfolio Demo
+  
+  Copyright 2013 Weswit s.r.l.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <title>Lightstreamer :: Portfolio Demo</title>
+  <link rel="stylesheet" type="text/css" href="css/portfolio.css" />
+</head>
+
+<body>
+  <div id="wrap">
+    <table width="460" border="0">  
+      <tr>
+        <td><a href="http://www.lightstreamer.com" target="_blank">
+          <img src="images/logo.png" alt="LIGHTSTREAMER" hspace="0" border="0" /></a></td>
+        <td class="demoTitle">PORTFOLIO DEMO</td>
+      </tr>
+    </table>
+
+    <br />
+    
+    <!-- portfolio table; see Lightstreamer-related code in portfolio.js -->
+    <table width="460" cellspacing="1" cellpadding="2" border="0">
+      <tr>
+        <td width="180" nowrap id="col_stock_name" class="tableTitle">
+          <a href="#" onclick="changeSort('stock_name');return false;">Stock</a>
+          <img width="10" src="images/spacer.gif" id="img_stock_name" /></td>
+
+        <td width="50" nowrap id="col_last_price" class="tableTitle">
+          <a href="#" onclick="changeSort('last_price');return false;">Price</a>
+          <img width="10" src="images/spacer.gif" id="img_last_price" /></td>
+
+        <td width="65" nowrap id="col_qty" class="tableTitle">
+          <a href="#" onclick="changeSort('qty');return false;">Quantity</a>
+          <img width="10" src="images/spacer.gif" id="img_qty" /></td>
+
+        <td width="85" nowrap id="col_c_value" class="tableTitle">
+          <a href="#" onclick="changeSort('c_value');return false;">Countervalue</a>
+          <img width="10" src="images/spacer.gif" id="img_c_value" /></td>
+
+        <td width="60" nowrap id="col_time" class="tableTitle">
+          <a href="#" onclick="changeSort('time');return false;">Time</a>
+          <img width="10" src="images/spacer.gif" id="img_time" /></td>
+      </tr>
+      <!-- row template; will be cloned for each received "ADD" command -->
+      <tr class="tablerow" id="portfolio" data-source="lightstreamer" >
+        <td><div data-source="lightstreamer" data-field="stock_name"></div></td>
+        <td><div data-source="lightstreamer" data-field="last_price"></div></td>
+        <td><div data-source="lightstreamer" data-field="qty"></div></td>
+        <td><div data-source="lightstreamer" data-field="c_value"></div></td>
+        <td><div data-source="lightstreamer" data-field="time"></div></td>
+      </tr>
+    </table>
+
+    <br />
+      
+    <!-- order entry section; see management code in buysell.js -->
+    <form onSubmit="return false;">
+      <table width="460" border="0" cellpadding="2" cellspacing="0">
+        <tr class="tableTitle">
+          <td colspan="3">Order Submission</td>
+        </tr>
+        <tr class="inputPanel">
+          <td width="200" class="inputPanel" >
+            <select id="stockN" type="select" style="font-size: 8pt"></select>
+          </td>
+          <td width="130" class="inputPanel" >
+            Quantity: <input id="qtyN" type="text" size="8" style="font-size: 8pt" />
+          </td>
+          <td width="130" class="inputPanel" style="text-align: center;">
+            <input type="submit" id="buy" disabled value="Buy" onclick="submitForm('BUY')" />&nbsp;&nbsp;
+            <input type="submit" id="sell" disabled value="Sell" onclick="submitForm('SELL')" />
+          </td>
+        </tr>
+      </table>
+    </form>
+      
+    <br />
+      
+    <!-- orders table; see Lightstreamer-related code in buysell.js -->
+    <table width="460" cellspacing="1" cellpadding="2" border="0">
+      <tr class="tableTitle">
+          <td colspan="5">Orders Log</td>
+      </tr>
+      <tr>
+        <td width="55"  nowrap id="col_ord_prog" class="tableTitle">
+          <a href="#" onclick="changeSortOrders('prog');return false;">Prog</a>
+          <img width="10" src="images/spacer.gif" id="img_ord_prog" /></td>
+        <td width="180" nowrap id="col_ord_stock" class="tableTitle">
+           <a href="#" onclick="changeSortOrders('stock');return false;">Stock</a>
+          <img width="10" src="images/spacer.gif" id="img_ord_stock" /></td>
+        <td width="45" nowrap id="col_ord_side" class="tableTitle">
+          <a href="#" onclick="changeSortOrders('side');return false;">Order</a>
+          <img width="10" src="images/spacer.gif" id="img_ord_side" /></td>
+        <td width="75" nowrap id="col_ord_qty" class="tableTitle">
+          <a href="#" onclick="changeSortOrders('qty');return false;">Quantity</a>
+          <img width="10" src="images/spacer.gif" id="img_ord_qty" /></td>
+        <td width="95" nowrap id="col_ord_status" class="tableTitle">
+          <a href="#" onclick="changeSortOrders('status');return false;">Status</a>
+          <img width="10" src="images/spacer.gif" id="img_ord_status" /></td>
+      </tr>
+
+      <tr class="tablerow" id="orders" data-source="lightstreamer" >
+        <td><div data-source="lightstreamer" data-field="prog"></div></td>
+        <td><div data-source="lightstreamer" data-field="stock"></div></td>
+        <td><div data-source="lightstreamer" data-field="side"></div></td>
+        <td><div data-source="lightstreamer" data-field="qty"></div></td>
+        <td><div data-source="lightstreamer" data-field="status"></div></td>
+      </tr>
+    </table>
+      
+    <p class="note">
+      - Use the red panel to <b>BUY</b> and <b>SELL</b> stocks.<br />
+      - Click on any table title to <b>SORT</b> on different columns (each click inverts the <br />
+        &nbsp; sort direction and the third click disables sorting).
+    </p>
+  </div>
+  
+<script src="js/require.js"></script>
+<script src="js/lightstreamer.js"></script>
+
+<!-- Define a Lightstreamer connection -->
+<script src="js/lsClient.js" type="text/javascript"></script>
+
+<!-- order entry section management -->
+<script src="js/buysell.js" type="text/javascript"></script>
+
+<!-- portfolio table management -->
+<script src="js/portfolio.js" type="text/javascript"></script>
+  
+</body>
+
+</html>
