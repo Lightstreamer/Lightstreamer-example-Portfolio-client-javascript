@@ -42,6 +42,9 @@ See Also
 --------
 
 * TODO: add link to GitHub project of [Lightstreamer Portfolio Demo Adapter]
+* TODO: add link to GitHub project of [Lightstreamer Stock-List Demo Adapter]
+* TODO: add link to GitHub project of [Lightstreamer Basic Portfolio Demo Client for JavaScript]
+* TODO: add link to GitHub project of [Lightstreamer Stock-List Demo Client for JavaScript]
 
 Lightstreamer Compatibility Notes
 ---------------------------------
