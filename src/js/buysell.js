@@ -186,7 +186,7 @@ function changePage(direction) {
 }*/
 
 var client = null;
-require(["lsClient","DynaGrid"],function(lsClient,DynaGrid) {
+require(["js/lsClient","DynaGrid"],function(lsClient,DynaGrid) {
   //save references to the LightstreamerClient to be used to 
   //send messages
   client = lsClient;

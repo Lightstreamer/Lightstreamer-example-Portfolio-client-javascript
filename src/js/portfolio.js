@@ -82,7 +82,7 @@ function changeSort(sortOn) {
 
 //////////////// Subscription and Grid setup
 
-require(["lsClient","Subscription","DynaGrid"], function(lsClient,Subscription,DynaGrid) {
+require(["js/lsClient","Subscription","DynaGrid"], function(lsClient,Subscription,DynaGrid) {
 
   portfolioGrid = new DynaGrid("portfolio",true);
   portfolioGrid.setAutoCleanBehavior(true,false);
