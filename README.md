@@ -29,7 +29,7 @@ Before you can run the demo some dependencies need to be solved:
 -  Get the require.js file form the [requirejs.org](http://requirejs.org/docs/download.html) and put it in the src/js folder of the demo.
 
 You can deploy this Demo in order to use the Lightstreamer server as Web server or in any external Web Server you are running. 
-If you choose the former case please note that in the <LS_HOME>/pages/demos/PortfolioDemo folder there is a copy of the src directory of this project. The client demo configuration assume that Lightstreamer Server, Lightstreamer Adapters and this client are launched on the same machine.
+If you choose the former case please note that in the <LS_HOME>/pages/demos/PortfolioDemo folder there is a copy of the src directory of this project (If it is not your case, please create the folder <LS_HOME>/pages/demos/PortfolioDemo and copy here the contents of the src folder of this project). The client demo configuration assume that Lightstreamer Server, Lightstreamer Adapters and this client are launched on the same machine.
 If you need to targeting a different Lightstreamer server please search this line in lsClient.js:
 ```js
 var lsClient = new LightstreamerClient(protocolToUse+"//localhost:8080","DEMO");
@@ -41,7 +41,7 @@ The demo is now ready to be launched. [Here](http://www.lightstreamer.com/demo/P
 See Also
 --------
 
-* TODO: add link to GitHub project of [Lightstreamer Portfolio Demo Adapter]
+* [Lightstreamer Portfolio Demo Adapter](https://github.com/Weswit/Lightstreamer-example-Portfolio-adapter-java)
 * TODO: add link to GitHub project of [Lightstreamer Stock-List Demo Adapter]
 * TODO: add link to GitHub project of [Lightstreamer Basic Portfolio Demo Client for JavaScript]
 * TODO: add link to GitHub project of [Lightstreamer Stock-List Demo Client for JavaScript]
