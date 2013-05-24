@@ -42,7 +42,7 @@ See Also
 --------
 
 * [Lightstreamer Portfolio Demo Adapter](https://github.com/Weswit/Lightstreamer-example-Portfolio-adapter-java)
-* TODO: add link to GitHub project of [Lightstreamer Stock-List Demo Adapter]
+* [Lightstreamer Stock-List Demo Adapter](https://github.com/Weswit/Lightstreamer-example-Stocklist-adapter-java)
 * TODO: add link to GitHub project of [Lightstreamer Basic Portfolio Demo Client for JavaScript]
 * TODO: add link to GitHub project of [Lightstreamer Stock-List Demo Client for JavaScript]
 
