@@ -2,6 +2,15 @@
 Lightstreamer Portfolio Demo Client for JavaScript
 ==================================================
 
+This project includes three different demo:
+
+* Basic Portfolio Demo (to be add)
+* Portfolio Demo
+* Drop-Down Demo (to be add)
+
+Portfolio Demo
+--------------
+
 This demo application extends the [Basic Portfolio Demo](http://www.lightstreamer.com/demos#PortfolioDemo_Basic) by combining live stock prices as in the [Stock-List Demos](http://www.lightstreamer.com/demos#StockListDemo_Basic) with the portfolio contents.
 The columns show: stock name, last price, quantity (number of stocks in the portfolio), countervalue (=price*quantity), time of last price.
 
@@ -29,7 +38,7 @@ Before you can run the demo some dependencies need to be solved:
 -  Get the require.js file form the [requirejs.org](http://requirejs.org/docs/download.html) and put it in the src/js folder of the demo.
 
 You can deploy this Demo in order to use the Lightstreamer server as Web server or in any external Web Server you are running. 
-If you choose the former case please note that in the <LS_HOME>/pages/demos/PortfolioDemo folder there is a copy of the src directory of this project (If it is not your case, please create the folder <LS_HOME>/pages/demos/PortfolioDemo and copy here the contents of the src folder of this project). The client demo configuration assume that Lightstreamer Server, Lightstreamer Adapters and this client are launched on the same machine.
+If you choose the former case please note that in the <LS_HOME>/pages/demos/PortfolioDemo folder there is a copy of the src/PortfolioDemo directory of this project (If it is not your case, please create the folder <LS_HOME>/pages/demos/PortfolioDemo and copy here the contents of the src/PortfolioDemo folder of this project). The client demo configuration assume that Lightstreamer Server, Lightstreamer Adapters and this client are launched on the same machine.
 If you need to targeting a different Lightstreamer server please search this line in lsClient.js:
 ```js
 var lsClient = new LightstreamerClient(protocolToUse+"//localhost:8080","DEMO");
