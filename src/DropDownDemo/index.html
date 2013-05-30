@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<!--
+  LIGHTSTREAMER - www.lightstreamer.com
+  Drop-Down Demo
+  
+  Copyright 2013 Weswit s.r.l.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <title>Lightstreamer :: Drop-Down Demo</title>
+  <link rel="stylesheet" type="text/css" href="css/dd.css" />
+</head>
+
+<body>
+  <a href="https://github.com/Weswit/Lightstreamer-example-Portfolio-client-javascript"><img style="position: absolute; top: 0; right: 0; border: 0; z-index:1" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+  <div id="wrap">
+    <table width="400" border="0">  
+      <tr>
+        <td><a href="http://www.lightstreamer.com" target="_blank">
+          <img src="images/logo.png" alt="LIGHTSTREAMER" hspace="0" border="0" /></a></td>
+        <td class="demoTitle">DROP-DOWN DEMO</td>
+      </tr>
+    </table>
+
+    <br />
+
+    <table width="400" border="0">  
+      <tr>
+        <td class="selectCell">
+          <!-- Drop-down list, to be filled with pushed data -->
+          <select id="stockN" type="select">
+            <option>loading...</option>
+          </select>
+        </td>
+      </tr><tr>
+        <td class="note">
+          <br />
+          The drop-down list is kept up-to-date based on the contents of a stock portfolio.
+          Open a <a href="../PortfolioDemo_Basic" target="_BLANK" >
+          Basic Portfolio Demo</a> and buy new items or sell existing items, to see the
+          changes reflected in the drop-down list.      
+        </td>
+      </tr>
+    </table>
+  </div>
+
+<script src="js/require.js"></script>
+<script src="js/lightstreamer.js"></script>
+<script type="text/javascript">
+  
+//////////////// Facilities to Handle a Simple HTML <select> Element
+
+  define("SimpleSelectHandler",[],function() {
+    // create a wrapper class to handle the <select> manipulation
+    function SimpleSelectHandler(selectId) {
+      // the <select> tag must be on the page. Get its reference
+      this.select = document.getElementById(selectId);
+      if (!this.select) {
+        // if the <select> is not on the page throw an exception
+        throw(selectId + " not found");
+      }
+    }
+
+    // used to remove all the <option> elements from the managed <select>
+    SimpleSelectHandler.prototype = {
+      clear: function() {
+        // iterate while the <select> has children; the only children the
+        // <select> should have are the <option> elements added by this class
+        while(this.select.hasChildNodes()) {
+          this.select.removeChild(this.select.firstChild);
+        }
+      },
+
+      // used to add a single <option> element to the managed <select>
+      addOption: function(value, text) {
+        var refOpt;
+        // search through existing <option> elements to find the child that
+        // should be just after the <option> element we are inserting;
+        // to keep the code simple we do a linear search to find the position
+        for (var i = 0; i < this.select.childNodes.length; i++) {
+          if (this.select.childNodes[i].value > value) {
+            refOpt = this.select.childNodes[i];
+            break;
+          }
+        }
+
+        // create and fill the new <option>
+        var newOpt = document.createElement("option");
+        newOpt.value = value;
+        newOpt.innerHTML = text;
+
+        if (!refOpt) {
+          // if there aren't values greater than that being inserted
+          // we append the new <option>
+          this.select.appendChild(newOpt);
+        } else {
+          // otherwise we insert it before the greater
+          this.select.insertBefore(newOpt, refOpt);
+        }
+      },
+
+      // used to remove a single <option> element from the managed <select>
+      removeOption: function(value) {
+        // to keep the code simple we do a linear search to find the <option> to remove
+        for (var i = 0; i < this.select.childNodes.length; i++) {
+          if (this.select.childNodes[i].value == value) {
+            this.select.removeChild(this.select.childNodes[i]);
+            return true;
+          }
+        }
+        return false;
+      },
+
+      // used to modify a single <option> element on the managed <select>
+      modifyOption: function(oldValue, newValue, newText) {
+        for (var i = 0; i < this.select.childNodes.length; i++) {
+          if (this.select.childNodes[i].value == oldValue) {
+            this.select.childNodes[i].value = newValue;
+            this.select.childNodes[i].innerHTML = newText;
+            return true;
+          }
+        }
+        return false;
+      }
+    };
+    
+    return SimpleSelectHandler;
+    
+  });
+</script>
+
+<script>  
+
+   require(["js/lsClient","SimpleSelectHandler","Subscription"], 
+    function(lsClient,SimpleSelectHandler,Subscription) {
+
+    // utility wrapper object, to handle the <select> manipulation
+    var selectHandler = new SimpleSelectHandler("stockN");
+    
+    //////////////// Subscription Management
+
+    // create a Subscription, ro receive the potfolio updates
+    var subscription = new Subscription("COMMAND", "portfolio1", ["key","command"]);
+    subscription.setDataAdapter("PORTFOLIO_ADAPTER");
+    subscription.setRequestedSnapshot("yes");
+
+    // callback that receives the updates from the Server
+    subscription.addListener({
+      onItemUpdate: function (info) {
+        var command = info.getValue("command");
+        var text = info.getValue("key")
+        var value = new Number(text.substr(4));
+
+        if (command == "ADD") {
+          selectHandler.addOption(value, text);
+
+        } else if (command == "DELETE") {
+          selectHandler.removeOption(value);
+
+        } // else if (command == "UPDATE") {
+          // it is still possible, but there is nothing to do
+        // }
+      },
+      
+      onSubscription: function() {
+        // clear the <select> when the life of the table starts,
+        // to remove entries from previous lives
+        selectHandler.clear();
+      }
+    });
+    // subscribe
+    lsClient.subscribe(subscription);
+  
+  });
+
+</script>
+
+</body>
+
+</html>

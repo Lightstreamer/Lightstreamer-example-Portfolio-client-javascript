@@ -6,7 +6,7 @@ This project includes three different demo:
 
 * Basic Portfolio Demo
 * Portfolio Demo
-* Drop-Down Demo (to be add)
+* Drop-Down Demo
 
 Basic Portfolio Demo
 --------------------
@@ -33,8 +33,18 @@ Compared to the [Basic Portfolio Demo](http://www.lightstreamer.com/demos#Portfo
 * The order submission is done by sending a message directly to Lightstreamer Server using the [LightstreamerClient.sendMessage](http://www.lightstreamer.com/docs/client_javascript_uni_api/LightstreamerClient.html#sendMessage) utility.
 * A [DynaGrid](http://www.lightstreamer.com/docs/client_javascript_uni_api/DynaGrid.html) is fed dynamically with one row for each sendMessage invocation and updated via an appropriate [ClientMessageListener](http://www.lightstreamer.com/docs/client_javascript_uni_api/ClientMessageListener.html).
 
-Run The Demo
-------------
+Drop-Down Demo
+--------------
+
+This demo application shows a changeable list of items within a normal HTML drop-down menu. The contents of the list change in real time, based on the commands pushed by the Server.
+The feed that controls the list contents is the same as in the Portfolio Demos (i.e. it subscribes to the same item from the same Data Adapter) and it is shared among all the connected users. So, you can see the drop-down menu kept in sync across all the browsers connected to this page.
+
+The front-end code can be considered a reference example of visualization of data, coming from an item subscription, that does not leverage the Lightstreamer widgets, but uses custom HTML code or third-party widgets.
+
+* A [Subscription](http://www.lightstreamer.com/docs/client_javascript_uni_api/Subscription.html) containing 1 item, subscribed to in COMMAND mode. Each time the Server sends an "add" or "delete" command, the JavaScript code manipulates the drop-down menu to update its contents.
+
+Run The Demos
+-------------
 
 Before you can run the demos some dependencies need to be solved:
 
@@ -45,14 +55,14 @@ Before you can run the demos some dependencies need to be solved:
 -  Get the require.js file form the [requirejs.org](http://requirejs.org/docs/download.html) and put it in the src/<Demo>/js folder of the demo.
 
 You can deploy these demos in order to use the Lightstreamer server as Web server or in any external Web Server you are running. 
-If you choose the former case please note that in the <LS_HOME>/pages/demos/ folder there is a copy of the src/PortfolioDemo and src/PortfolioDemo_Basic directories of this project (If it is not your case, please create the folders <LS_HOME>/pages/demos/PortfolioDemo and <LS_HOME>/pages/demos/PortfolioDemo_Basic then copy here the contents of the src/PortfolioDemo and src/PortfolioDemo_Basic folders of this project). The client demos configuration assume that Lightstreamer Server, Lightstreamer Adapters and this client are launched on the same machine.
+If you choose the former case please note that in the <LS_HOME>/pages/demos/ folder there is a copy of the src/PortfolioDemo, src/PortfolioDemo_Basic, and src/DropDownDemo directories of this project (If it is not your case, please create the folders <LS_HOME>/pages/demos/PortfolioDemo, <LS_HOME>/pages/demos/PortfolioDemo_Basic, and <LS_HOME>/pages/demos/DropDownDemo then copy here the contents of the src/PortfolioDemo, src/PortfolioDemo_Basic, and src/DropDownDemo folders of this project). The client demos configuration assume that Lightstreamer Server, Lightstreamer Adapters and this client are launched on the same machine.
 If you need to targeting a different Lightstreamer server please search this line in lsClient.js:
 ```js
 var lsClient = new LightstreamerClient(protocolToUse+"//localhost:8080","DEMO");
 ```
 and change it accordingly. 
 Anyway the PORTFOLIO_ADAPTER, QUOTE_ADAPTER (only for PortfolioDemo), PortfolioMetadataAdapter have to be deployed in your local Lightstreamer server instance. The factory configuration of Lightstreamer server already provides this adapters deployed.
-The demos are now ready to be launched. You can find demostrations hosted in our servers here: [PortfolioDemo_Basic](http://www.lightstreamer.com/demo/PortfolioDemo_Basic/), [PortfolioDemo](http://www.lightstreamer.com/demo/PortfolioDemo/).
+The demos are now ready to be launched. You can find demostrations hosted in our servers here: [PortfolioDemo_Basic](http://www.lightstreamer.com/demo/PortfolioDemo_Basic/), [PortfolioDemo](http://www.lightstreamer.com/demo/PortfolioDemo/), and [DropDownDemo](http://www.lightstreamer.com/demo/DropDownDemo/).
 
 See Also
 --------
