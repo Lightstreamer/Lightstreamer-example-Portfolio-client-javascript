@@ -14,6 +14,7 @@
   limitations under the License.
 */
 
+//////////////// Connect to current host (or localhost) and configure a StatusWidget
 define(["LightstreamerClient","StatusWidget"],function(LightstreamerClient,StatusWidget) {
     var protocolToUse = document.location.protocol != "file:" ? document.location.protocol : "http:";
     var lsClient = new LightstreamerClient(protocolToUse+"//localhost:8080","DEMO");

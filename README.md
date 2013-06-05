@@ -11,10 +11,12 @@ This project includes three different demo:
 Basic Portfolio Demo
 --------------------
 
-In the Basic Portfolio Demo, a virtual stock portfolio, shared among all the connected users, is displayed. By using the "Submit Order" panel, you can buy or sell a stock (identified by an item number), filling in the Quantity field and pressing the proper button. Click on the column headers to sort the grid on different columns.
+In the Basic Portfolio Demo, a virtual stock portfolio, shared among all the connected users, is displayed.<br>
+By using the "Submit Order" panel, you can buy or sell a stock (identified by an item number), filling in the Quantity field and pressing the proper button. Click on the column headers to sort the grid on different columns.
 The portfolio grid is updated in push mode, for both the columns and the rows (this is the so called "metapush" feature). This portfolio is shared among all the connected users, so you can connect to this demo from different machines (or try at least different browsers on the same machine), then submit orders from one browser and see the updates displayed on another browser.
 The front-end code can be considered a reference example of item subscriptions in COMMAND mode.
 
+The demo includes the following client-side technologies:
 * A [Subscription](http://www.lightstreamer.com/docs/client_javascript_uni_api/Subscription.html) containing 1 item, subscribed to in COMMAND mode feeding a [DynaGrid](http://www.lightstreamer.com/docs/client_javascript_uni_api/DynaGrid.html). Each row of the grid is identified by a unique key. For didactic purpose, this example displays the command and key fields, which are usually hidden.
 * The order submission is done by sending a message directly to Lightstreamer Server using the [LightstreamerClient.sendMessage](http://www.lightstreamer.com/docs/client_javascript_uni_api/LightstreamerClient.html#sendMessage) utility.
 
@@ -29,6 +31,7 @@ The front-end code can be considered a reference example of item subscriptions i
 
 Compared to the [Basic Portfolio Demo](http://www.lightstreamer.com/demos#PortfolioDemo_Basic) a panel has been added to display information about the submission of orders. It displays your orders only and not those submitted by other connected users. The columns show: progressive number of order, stock name, type of order (buy or sell), quantity, and status of order (SUBMITTING, PROCESSED, ABORT, DENY, DISCARDED, ERROR).
 
+The demo includes the following client-side technologies:
 * A [Subscription](http://www.lightstreamer.com/docs/client_javascript_uni_api/Subscription.html) containing 1 item, subscribed to in COMMAND mode feeding a [DynaGrid](http://www.lightstreamer.com/docs/client_javascript_uni_api/DynaGrid.html). Each added row automatically provokes an underlying subscription to a sub-item in MERGE mode, to get the real-time price for that specific stock from another feed (the same as the Stock-List Demos). When a row is deleted, the underlying sub-item is automatically unsubscribed from.
 * The order submission is done by sending a message directly to Lightstreamer Server using the [LightstreamerClient.sendMessage](http://www.lightstreamer.com/docs/client_javascript_uni_api/LightstreamerClient.html#sendMessage) utility.
 * A [DynaGrid](http://www.lightstreamer.com/docs/client_javascript_uni_api/DynaGrid.html) is fed dynamically with one row for each sendMessage invocation and updated via an appropriate [ClientMessageListener](http://www.lightstreamer.com/docs/client_javascript_uni_api/ClientMessageListener.html).
@@ -36,11 +39,12 @@ Compared to the [Basic Portfolio Demo](http://www.lightstreamer.com/demos#Portfo
 Drop-Down Demo
 --------------
 
-This demo application shows a changeable list of items within a normal HTML drop-down menu. The contents of the list change in real time, based on the commands pushed by the Server.
+This demo application shows a changeable list of items within a normal HTML drop-down menu. The contents of the list change in real time, based on the commands pushed by the Server.<br>
 The feed that controls the list contents is the same as in the Portfolio Demos (i.e. it subscribes to the same item from the same Data Adapter) and it is shared among all the connected users. So, you can see the drop-down menu kept in sync across all the browsers connected to this page.
 
 The front-end code can be considered a reference example of visualization of data, coming from an item subscription, that does not leverage the Lightstreamer widgets, but uses custom HTML code or third-party widgets.
 
+The demo includes the following client-side technologies:
 * A [Subscription](http://www.lightstreamer.com/docs/client_javascript_uni_api/Subscription.html) containing 1 item, subscribed to in COMMAND mode. Each time the Server sends an "add" or "delete" command, the JavaScript code manipulates the drop-down menu to update its contents.
 
 Run The Demos
@@ -60,8 +64,8 @@ If you need to targeting a different Lightstreamer server please search this lin
 ```js
 var lsClient = new LightstreamerClient(protocolToUse+"//localhost:8080","DEMO");
 ```
-and change it accordingly. 
-Anyway the PORTFOLIO_ADAPTER, QUOTE_ADAPTER (only for PortfolioDemo), PortfolioMetadataAdapter have to be deployed in your local Lightstreamer server instance. The factory configuration of Lightstreamer server already provides this adapters deployed.
+and change it accordingly.<br>
+Anyway the [PORTFOLIO_ADAPTER](https://github.com/Weswit/Lightstreamer-example-Portfolio-adapter-java), [QUOTE_ADAPTER](https://github.com/Weswit/Lightstreamer-example-Stocklist-adapter-java) (only for PortfolioDemo), and [PortfolioMetadataAdapter](https://github.com/Weswit/Lightstreamer-example-Portfolio-adapter-java) have to be deployed in your local Lightstreamer server instance. The factory configuration of Lightstreamer server already provides this adapters deployed.<br>
 The demos are now ready to be launched. You can find demostrations hosted in our servers here: [PortfolioDemo_Basic](http://www.lightstreamer.com/demo/PortfolioDemo_Basic/), [PortfolioDemo](http://www.lightstreamer.com/demo/PortfolioDemo/), and [DropDownDemo](http://www.lightstreamer.com/demo/DropDownDemo/).
 
 See Also
@@ -69,7 +73,7 @@ See Also
 
 * [Lightstreamer Portfolio Demo Adapter](https://github.com/Weswit/Lightstreamer-example-Portfolio-adapter-java)
 * [Lightstreamer StockList Demo Adapter](https://github.com/Weswit/Lightstreamer-example-Stocklist-adapter-java)
-* TODO: add link to GitHub project of [Lightstreamer StockList Demo Client for JavaScript]
+* [Lightstreamer StockList Demo Client for JavaScript](https://github.com/Weswit/Lightstreamer-example-Stocklist-client-javascript)
 
 Lightstreamer Compatibility Notes
 ---------------------------------
