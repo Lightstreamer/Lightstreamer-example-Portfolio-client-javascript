@@ -11,6 +11,19 @@ This project includes three different demo:
 Basic Portfolio Demo
 --------------------
 
+<table>
+  <tr>
+    <td style="text-align: left">
+      &nbsp;<a href="http://www.lightstreamer.com/demo/PortfolioDemo_Basic" target="_blank"><img src="http://www.lightstreamer.com/img/demo/screen_basicportfolio.png"></a>&nbsp;
+      
+    </td>
+    <td>
+      &nbsp;An online demonstration is hosted on our servers at:<br>
+      &nbsp;<a href="http://www.lightstreamer.com/demo/PortfolioDemo_Basic" target="_blank">http://www.lightstreamer.com/demo/PortfolioDemo_Basic</a>
+    </td>
+  </tr>
+</table>
+
 In the Basic Portfolio Demo, a virtual stock portfolio, shared among all the connected users, is displayed.<br>
 By using the "Submit Order" panel, you can buy or sell a stock (identified by an item number), filling in the Quantity field and pressing the proper button. Click on the column headers to sort the grid on different columns.
 The portfolio grid is updated in push mode, for both the columns and the rows (this is the so called "metapush" feature). This portfolio is shared among all the connected users, so you can connect to this demo from different machines (or try at least different browsers on the same machine), then submit orders from one browser and see the updates displayed on another browser.
@@ -22,6 +35,19 @@ The demo includes the following client-side technologies:
 
 Portfolio Demo
 --------------
+
+<table>
+  <tr>
+    <td style="text-align: left">
+      &nbsp;<a href="http://www.lightstreamer.com/demo/PortfolioDemo" target="_blank"><img src="http://www.lightstreamer.com/img/demo/screen_portfolio.png"></a>&nbsp;
+      
+    </td>
+    <td>
+      &nbsp;An online demonstration is hosted on our servers at:<br>
+      &nbsp;<a href="http://www.lightstreamer.com/demo/PortfolioDemo" target="_blank">http://www.lightstreamer.com/demo/PortfolioDemo</a>
+    </td>
+  </tr>
+</table>
 
 This demo application extends the [Basic Portfolio Demo](http://www.lightstreamer.com/demos#PortfolioDemo_Basic) by combining live stock prices as in the [Stock-List Demos](http://www.lightstreamer.com/demos#StockListDemo_Basic) with the portfolio contents.
 The columns show: stock name, last price, quantity (number of stocks in the portfolio), countervalue (=price*quantity), time of last price.
@@ -39,6 +65,19 @@ The demo includes the following client-side technologies:
 Drop-Down Demo
 --------------
 
+<table>
+  <tr>
+    <td style="text-align: left">
+      &nbsp;<a href="http://www.lightstreamer.com/demo/DropDownDemo" target="_blank"><img src="http://www.lightstreamer.com/img/demo/screen_dropdown.png"></a>&nbsp;
+      
+    </td>
+    <td>
+      &nbsp;An online demonstration is hosted on our servers at:<br>
+      &nbsp;<a href="http://www.lightstreamer.com/demo/DropDownDemo" target="_blank">http://www.lightstreamer.com/demo/DropDownDemo</a>
+    </td>
+  </tr>
+</table>
+
 This demo application shows a changeable list of items within a normal HTML drop-down menu. The contents of the list change in real time, based on the commands pushed by the Server.<br>
 The feed that controls the list contents is the same as in the Portfolio Demos (i.e. it subscribes to the same item from the same Data Adapter) and it is shared among all the connected users. So, you can see the drop-down menu kept in sync across all the browsers connected to this page.
 
@@ -50,13 +89,13 @@ The demo includes the following client-side technologies:
 Run The Demos
 -------------
 
-Before you can run the demos some dependencies need to be solved:
+Before you can run the demos of this project some dependencies need to be solved:
 
 -  Get the lightstreamer.js file from the [Lightstreamer 5 Colosseo distribution](http://www.lightstreamer.com/download) 
-   and put it in the src/<Demo>/js folder of the demo. Alternatively you can build a lightstreamer.js file from the 
+   and put it in the src/[demo_name]/js folder of the demo. Alternatively you can build a lightstreamer.js file from the 
    [online generator](http://www.lightstreamer.com/distros/Lightstreamer_Allegro-Presto-Vivace_5_0_Colosseo_20120803/Lightstreamer/DOCS-SDKs/sdk_client_javascript/tools/generator.html).
    In that case be sure to include the LightstreamerClient, Subscription, DynaGrid and StatusWidget modules and to use the "Use AMD" version.
--  Get the require.js file form the [requirejs.org](http://requirejs.org/docs/download.html) and put it in the src/<Demo>/js folder of the demo.
+-  Get the require.js file form the [requirejs.org](http://requirejs.org/docs/download.html) and put it in the src/[demo_name]/js folder of the demo.
 
 You can deploy these demos in order to use the Lightstreamer server as Web server or in any external Web Server you are running. 
 If you choose the former case please note that in the <LS_HOME>/pages/demos/ folder there is a copy of the src/PortfolioDemo, src/PortfolioDemo_Basic, and src/DropDownDemo directories of this project (If it is not your case, please create the folders <LS_HOME>/pages/demos/PortfolioDemo, <LS_HOME>/pages/demos/PortfolioDemo_Basic, and <LS_HOME>/pages/demos/DropDownDemo then copy here the contents of the src/PortfolioDemo, src/PortfolioDemo_Basic, and src/DropDownDemo folders of this project). The client demos configuration assume that Lightstreamer Server, Lightstreamer Adapters and this client are launched on the same machine.
@@ -66,7 +105,7 @@ var lsClient = new LightstreamerClient(protocolToUse+"//localhost:8080","DEMO");
 ```
 and change it accordingly.<br>
 Anyway the [PORTFOLIO_ADAPTER](https://github.com/Weswit/Lightstreamer-example-Portfolio-adapter-java), [QUOTE_ADAPTER](https://github.com/Weswit/Lightstreamer-example-Stocklist-adapter-java) (only for PortfolioDemo), and [PortfolioMetadataAdapter](https://github.com/Weswit/Lightstreamer-example-Portfolio-adapter-java) have to be deployed in your local Lightstreamer server instance. The factory configuration of Lightstreamer server already provides this adapters deployed.<br>
-The demos are now ready to be launched. You can find demostrations hosted in our servers here: [PortfolioDemo_Basic](http://www.lightstreamer.com/demo/PortfolioDemo_Basic/), [PortfolioDemo](http://www.lightstreamer.com/demo/PortfolioDemo/), and [DropDownDemo](http://www.lightstreamer.com/demo/DropDownDemo/).
+The demos are now ready to be launched.
 
 See Also
 --------
