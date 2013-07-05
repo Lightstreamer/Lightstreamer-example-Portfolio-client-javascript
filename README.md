@@ -1,25 +1,23 @@
 
-Lightstreamer Portfolio Demo Client for JavaScript
-==================================================
+# Lightstreamer Portfolio Demo Client for JavaScript #
 
-This project includes three different demo:
+This project includes three different demo based on [Lightstreamer Portfolio Demo Adapter](https://github.com/Weswit/Lightstreamer-example-Portfolio-adapter-java):
 
 * Basic Portfolio Demo
 * Portfolio Demo
 * Drop-Down Demo
 
-Basic Portfolio Demo
---------------------
+## Basic Portfolio Demo ##
 
 <table>
   <tr>
     <td style="text-align: left">
-      &nbsp;<a href="http://www.lightstreamer.com/demo/PortfolioDemo_Basic" target="_blank"><img src="http://www.lightstreamer.com/img/demo/screen_basicportfolio.png"></a>&nbsp;
+      &nbsp;<a href="http://demos.lightstreamer.com/PortfolioDemo_Basic" target="_blank"><img src="http://www.lightstreamer.com/img/demo/screen_basicportfolio.png"></a>&nbsp;
       
     </td>
     <td>
       &nbsp;An online demonstration is hosted on our servers at:<br>
-      &nbsp;<a href="http://www.lightstreamer.com/demo/PortfolioDemo_Basic" target="_blank">http://www.lightstreamer.com/demo/PortfolioDemo_Basic</a>
+      &nbsp;<a href="http://demos.lightstreamer.com/PortfolioDemo_Basic" target="_blank">http://demos.lightstreamer.com/PortfolioDemo_Basic</a>
     </td>
   </tr>
 </table>
@@ -33,18 +31,17 @@ The demo includes the following client-side technologies:
 * A [Subscription](http://www.lightstreamer.com/docs/client_javascript_uni_api/Subscription.html) containing 1 item, subscribed to in <b>COMMAND</b> mode feeding a [DynaGrid](http://www.lightstreamer.com/docs/client_javascript_uni_api/DynaGrid.html). Each row of the grid is identified by a unique key. For didactic purpose, this example displays the command and key fields, which are usually hidden.
 * The order submission is done by sending a message directly to Lightstreamer Server using the [LightstreamerClient.sendMessage](http://www.lightstreamer.com/docs/client_javascript_uni_api/LightstreamerClient.html#sendMessage) utility.
 
-Portfolio Demo
---------------
+## Portfolio Demo ##
 
 <table>
   <tr>
     <td style="text-align: left">
-      &nbsp;<a href="http://www.lightstreamer.com/demo/PortfolioDemo" target="_blank"><img src="http://www.lightstreamer.com/img/demo/screen_portfolio.png"></a>&nbsp;
+      &nbsp;<a href="http://demos.lightstreamer.com/PortfolioDemo" target="_blank"><img src="http://www.lightstreamer.com/img/demo/screen_portfolio.png"></a>&nbsp;
       
     </td>
     <td>
       &nbsp;An online demonstration is hosted on our servers at:<br>
-      &nbsp;<a href="http://www.lightstreamer.com/demo/PortfolioDemo" target="_blank">http://www.lightstreamer.com/demo/PortfolioDemo</a>
+      &nbsp;<a href="http://demos.lightstreamer.com/PortfolioDemo" target="_blank">http://demos.lightstreamer.com/PortfolioDemo</a>
     </td>
   </tr>
 </table>
@@ -62,18 +59,17 @@ The demo includes the following client-side technologies:
 * The order submission is done by sending a message directly to Lightstreamer Server using the [LightstreamerClient.sendMessage](http://www.lightstreamer.com/docs/client_javascript_uni_api/LightstreamerClient.html#sendMessage) utility.
 * A [DynaGrid](http://www.lightstreamer.com/docs/client_javascript_uni_api/DynaGrid.html) is fed dynamically with one row for each sendMessage invocation and updated via an appropriate [ClientMessageListener](http://www.lightstreamer.com/docs/client_javascript_uni_api/ClientMessageListener.html).
 
-Drop-Down Demo
---------------
+## Drop-Down Demo ##
 
 <table>
   <tr>
     <td style="text-align: left">
-      &nbsp;<a href="http://www.lightstreamer.com/demo/DropDownDemo" target="_blank"><img src="http://www.lightstreamer.com/img/demo/screen_dropdown.png"></a>&nbsp;
+      &nbsp;<a href="http://demos.lightstreamer.com/DropDownDemo" target="_blank"><img src="http://www.lightstreamer.com/img/demo/screen_dropdown.png"></a>&nbsp;
       
     </td>
     <td>
       &nbsp;An online demonstration is hosted on our servers at:<br>
-      &nbsp;<a href="http://www.lightstreamer.com/demo/DropDownDemo" target="_blank">http://www.lightstreamer.com/demo/DropDownDemo</a>
+      &nbsp;<a href="http://demos.lightstreamer.com/DropDownDemo" target="_blank">http://demos.lightstreamer.com/DropDownDemo</a>
     </td>
   </tr>
 </table>
@@ -86,12 +82,11 @@ The front-end code can be considered a reference example of visualization of dat
 The demo includes the following client-side technologies:
 * A [Subscription](http://www.lightstreamer.com/docs/client_javascript_uni_api/Subscription.html) containing 1 item, subscribed to in <b>COMMAND</b> mode. Each time the Server sends an "add" or "delete" command, the JavaScript code manipulates the drop-down menu to update its contents.
 
-Run The Demos
--------------
+# Deploy #
 
 Before you can run the demos of this project some dependencies need to be solved:
 
--  Get the lightstreamer.js file from the [Lightstreamer 5 Colosseo distribution](http://www.lightstreamer.com/download) 
+-  Get the lightstreamer.js file from the [latest Lightstreamer distribution](http://www.lightstreamer.com/download) 
    and put it in the src/[demo_name]/js folder of the demo. Alternatively you can build a lightstreamer.js file from the 
    [online generator](http://www.lightstreamer.com/distros/Lightstreamer_Allegro-Presto-Vivace_5_0_Colosseo_20120803/Lightstreamer/DOCS-SDKs/sdk_client_javascript/tools/generator.html).
    In that case be sure to include the LightstreamerClient, Subscription, DynaGrid and StatusWidget modules and to use the "Use AMD" version.
@@ -107,11 +102,17 @@ and change it accordingly.<br>
 Anyway the [PORTFOLIO_ADAPTER](https://github.com/Weswit/Lightstreamer-example-Portfolio-adapter-java), [QUOTE_ADAPTER](https://github.com/Weswit/Lightstreamer-example-Stocklist-adapter-java) (only for PortfolioDemo), and [PortfolioMetadataAdapter](https://github.com/Weswit/Lightstreamer-example-Portfolio-adapter-java) have to be deployed in your local Lightstreamer server instance. The factory configuration of Lightstreamer server already provides this adapters deployed.<br>
 The demos are now ready to be launched.
 
-See Also
---------
+
+# See Also #
+
+## Lightstreamer Adapters needed by these demo clients ##
 
 * [Lightstreamer Portfolio Demo Adapter](https://github.com/Weswit/Lightstreamer-example-Portfolio-adapter-java)
 * [Lightstreamer StockList Demo Adapter](https://github.com/Weswit/Lightstreamer-example-Stocklist-adapter-java)
+
+## Similar demo clients that may interest you ##
+
+* [Lightstreamer Portfolio Demo Client for Adobe Flex SDK](https://github.com/Weswit/Lightstreamer-example-Portfolio-client-flex)
 * [Lightstreamer StockList Demo Client for JavaScript](https://github.com/Weswit/Lightstreamer-example-Stocklist-client-javascript)
 
 Lightstreamer Compatibility Notes
