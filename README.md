@@ -12,7 +12,7 @@ This project includes three different demo based on [Lightstreamer Portfolio Dem
 <table>
   <tr>
     <td style="text-align: left">
-      &nbsp;<a href="http://demos.lightstreamer.com/PortfolioDemo_Basic" target="_blank"><img src="http://www.lightstreamer.com/img/demo/screen_basicportfolio.png"></a>&nbsp;
+      &nbsp;<a href="http://demos.lightstreamer.com/PortfolioDemo_Basic" target="_blank"><img src="screen_basicportfolio.png"></a>&nbsp;
       
     </td>
     <td>
@@ -36,7 +36,7 @@ The demo includes the following client-side technologies:
 <table>
   <tr>
     <td style="text-align: left">
-      &nbsp;<a href="http://demos.lightstreamer.com/PortfolioDemo" target="_blank"><img src="http://www.lightstreamer.com/img/demo/screen_portfolio.png"></a>&nbsp;
+      &nbsp;<a href="http://demos.lightstreamer.com/PortfolioDemo" target="_blank"><img src="screen_portfolio.png"></a>&nbsp;
       
     </td>
     <td>
@@ -64,7 +64,7 @@ The demo includes the following client-side technologies:
 <table>
   <tr>
     <td style="text-align: left">
-      &nbsp;<a href="http://demos.lightstreamer.com/DropDownDemo" target="_blank"><img src="http://www.lightstreamer.com/img/demo/screen_dropdown.png"></a>&nbsp;
+      &nbsp;<a href="http://demos.lightstreamer.com/DropDownDemo" target="_blank"><img src="screen_dropdown.png"></a>&nbsp;
       
     </td>
     <td>
