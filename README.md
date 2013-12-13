@@ -1,6 +1,6 @@
 # Lightstreamer - Portfolio Demos - HTML Clients #
 
-This project includes three different demo based on [Lightstreamer - Portfolio Demo - Java SE Adapter](https://github.com/Weswit/Lightstreamer-example-Portfolio-adapter-java):
+This project includes three different demo based on [Lightstreamer - Portfolio Demo - Java Adapter](https://github.com/Weswit/Lightstreamer-example-Portfolio-adapter-java):
 
 * Basic Portfolio Demo
 * Portfolio Demo
@@ -106,8 +106,8 @@ The demos are now ready to be launched.
 
 ## Lightstreamer Adapters needed by these demo clients ##
 
-* [Lightstreamer - Portfolio Demo - Java SE Adapter](https://github.com/Weswit/Lightstreamer-example-Portfolio-adapter-java)
-* [Lightstreamer - Stock-List Demo - Java SE Adapter](https://github.com/Weswit/Lightstreamer-example-Stocklist-adapter-java)
+* [Lightstreamer - Portfolio Demo - Java Adapter](https://github.com/Weswit/Lightstreamer-example-Portfolio-adapter-java)
+* [Lightstreamer - Stock-List Demo - Java Adapter](https://github.com/Weswit/Lightstreamer-example-Stocklist-adapter-java)
 
 ## Similar demo clients that may interest you ##
 
