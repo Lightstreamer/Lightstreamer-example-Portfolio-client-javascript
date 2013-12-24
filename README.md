@@ -7,7 +7,7 @@ This project includes three different demo based on [Lightstreamer - Portfolio D
 * Dynamic Drop-Down Demo
 
 ## Basic Portfolio Demo - HTML Client ##
-<!-- START DESCRIPTION Basic Portfolio Demo -->
+<!-- START DESCRIPTION lightstreamer-example-portfolio-client-javascript-basic-portfolio-demo---html-client -->
 
 <table>
   <tr>
@@ -31,10 +31,10 @@ The demo includes the following client-side technologies:
 * A [Subscription](http://www.lightstreamer.com/docs/client_javascript_uni_api/Subscription.html) containing 1 item, subscribed to in <b>COMMAND</b> mode feeding a [DynaGrid](http://www.lightstreamer.com/docs/client_javascript_uni_api/DynaGrid.html). Each row of the grid is identified by a unique key. For didactic purpose, this example displays the command and key fields, which are usually hidden.
 * The order submission is done by sending a message directly to Lightstreamer Server using the [LightstreamerClient.sendMessage](http://www.lightstreamer.com/docs/client_javascript_uni_api/LightstreamerClient.html#sendMessage) utility.
 
-<!-- END DESCRIPTION Basic Portfolio Demo -->
+<!-- END DESCRIPTION lightstreamer-example-portfolio-client-javascript-basic-portfolio-demo---html-client -->
 
 ## Portfolio Demo - HTML Client ##
-<!-- START DESCRIPTION Portfolio Demo -->
+<!-- START DESCRIPTION lightstreamer-example-portfolio-client-javascript-portfolio-demo---html-client -->
 
 <table>
   <tr>
@@ -62,10 +62,10 @@ The demo includes the following client-side technologies:
 * The order submission is done by sending a message directly to Lightstreamer Server using the [LightstreamerClient.sendMessage](http://www.lightstreamer.com/docs/client_javascript_uni_api/LightstreamerClient.html#sendMessage) utility.
 * A [DynaGrid](http://www.lightstreamer.com/docs/client_javascript_uni_api/DynaGrid.html) is fed dynamically with one row for each sendMessage invocation and updated via an appropriate [ClientMessageListener](http://www.lightstreamer.com/docs/client_javascript_uni_api/ClientMessageListener.html).
 
-<!-- END DESCRIPTION Portfolio Demo -->
+<!-- END DESCRIPTION lightstreamer-example-portfolio-client-javascript-portfolio-demo---html-client -->
 
 ## Dynamic Drop-Down Demo - HTML Client ##
-<!-- START DESCRIPTION Dynamic Drop-Down Demo -->
+<!-- START DESCRIPTION lightstreamer-example-portfolio-client-javascript-dynamic-drop-down-demo---html-client -->
 
 <table>
   <tr>
@@ -88,7 +88,7 @@ The front-end code can be considered a reference example of visualization of dat
 The demo includes the following client-side technologies:
 * A [Subscription](http://www.lightstreamer.com/docs/client_javascript_uni_api/Subscription.html) containing 1 item, subscribed to in <b>COMMAND</b> mode. Each time the Server sends an "add" or "delete" command, the JavaScript code manipulates the drop-down menu to update its contents.
 
-<!-- END DESCRIPTION Dynamic Drop-Down Demo -->
+<!-- END DESCRIPTION lightstreamer-example-portfolio-client-javascript-dynamic-drop-down-demo---html-client -->
 
 # Deploy #
 
