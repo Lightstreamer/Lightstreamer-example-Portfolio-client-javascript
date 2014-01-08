@@ -26,18 +26,8 @@ The demo includes the following client-side functionalities:
 ## Portfolio Demo - HTML Client ##
 <!-- START DESCRIPTION lightstreamer-example-portfolio-client-javascript-portfolio-demo---html-client -->
 
-<table>
-  <tr>
-    <td style="text-align: left">
-      &nbsp;<a href="http://demos.lightstreamer.com/PortfolioDemo" target="_blank"><img src="screen_portfolio.png"></a>&nbsp;
-      
-    </td>
-    <td>
-      &nbsp;An online demonstration is hosted on our servers at:<br>
-      &nbsp;<a href="http://demos.lightstreamer.com/PortfolioDemo" target="_blank">http://demos.lightstreamer.com/PortfolioDemo</a>
-    </td>
-  </tr>
-</table>
+![Demo ScreenShot](screen_portfolio_large.png)<br>
+An online demonstration is hosted on our servers at:[http://demos.lightstreamer.com/PortfolioDemo](http://demos.lightstreamer.com/PortfolioDemo)<br>
 
 This demo application extends the [Basic Portfolio Demo](https://github.com/Weswit/Lightstreamer-example-Portfolio-client-javascript#basic-portfolio-demo---html-client) by combining live stock prices as in the [Stock-List Demos](https://github.com/Weswit/Lightstreamer-example-StockList-client-javascript) with the portfolio contents.
 The columns show: stock name, last price, quantity (number of stocks in the portfolio), countervalue (=price*quantity), time of last price.
@@ -57,18 +47,9 @@ The demo includes the following client-side functionalities:
 ## Dynamic Drop-Down Demo - HTML Client ##
 <!-- START DESCRIPTION lightstreamer-example-portfolio-client-javascript-dynamic-drop-down-demo---html-client -->
 
-<table>
-  <tr>
-    <td style="text-align: left">
-      &nbsp;<a href="http://demos.lightstreamer.com/DropDownDemo" target="_blank"><img src="screen_dropdown.png"></a>&nbsp;
-      
-    </td>
-    <td>
-      &nbsp;An online demonstration is hosted on our servers at:<br>
-      &nbsp;<a href="http://demos.lightstreamer.com/DropDownDemo" target="_blank">http://demos.lightstreamer.com/DropDownDemo</a>
-    </td>
-  </tr>
-</table>
+![Demo ScreenShot](screen_dropsown_large.png)<br>
+An online demonstration is hosted on our servers at:[http://demos.lightstreamer.com/DropDownDemo](http://demos.lightstreamer.com/DropDownDemo)<br>
+
 
 This demo application shows a changeable list of items within a normal HTML drop-down menu. The contents of the list change in real time, based on the commands pushed by the Server.<br>
 The feed that controls the list contents is the same as in the [Portfolio Demos](https://github.com/Weswit/Lightstreamer-example-Portfolio-client-javascript#basic-portfolio-demo---html-client) (i.e. it subscribes to the same item from the same Data Adapter) and it is shared among all the connected users. So, you can see the drop-down menu kept in sync across all the browsers connected to this page.
