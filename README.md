@@ -9,19 +9,6 @@ This project includes three different demo based on [Lightstreamer - Portfolio D
 ## Basic Portfolio Demo - HTML Client ##
 <!-- START DESCRIPTION lightstreamer-example-portfolio-client-javascript-basic-portfolio-demo---html-client -->
 
-<table>
-  <tr>
-    <td style="text-align: left">
-      &nbsp;<a href="http://demos.lightstreamer.com/PortfolioDemo_Basic" target="_blank"><img src="screen_basicportfolio.png"></a>&nbsp;
-      
-    </td>
-    <td>
-      &nbsp;An online demonstration is hosted on our servers at:<br>
-      &nbsp;<a href="http://demos.lightstreamer.com/PortfolioDemo_Basic" target="_blank">http://demos.lightstreamer.com/PortfolioDemo_Basic</a>
-    </td>
-  </tr>
-</table>
-
 ![Demo ScreenShot](screen_basicportfolio_large.png)<br>
 An online demonstration is hosted on our servers at:[http://demos.lightstreamer.com/PortfolioDemo_Basic](http://demos.lightstreamer.com/PortfolioDemo_Basic)<br>
 
