@@ -22,7 +22,8 @@ This project includes three different demo based on [Lightstreamer - Portfolio D
   </tr>
 </table>
 
-![Demo ScreenShot](screen_basicportfolio_large.png) [An online demonstration is hosted on our servers at:](http://demos.lightstreamer.com/PortfolioDemo_Basic)
+![Demo ScreenShot](screen_basicportfolio_large.png)<br>
+An online demonstration is hosted on our servers at:[http://demos.lightstreamer.com/PortfolioDemo_Basic](http://demos.lightstreamer.com/PortfolioDemo_Basic)<br>
 
 In the Basic Portfolio Demo, a virtual stock portfolio, shared among all the connected users, is displayed.<br>
 By using the "Submit Order" panel, you can buy or sell a stock (identified by an item number), filling in the Quantity field and pressing the proper button. Click on the column headers to sort the grid on different columns.
