@@ -10,7 +10,7 @@ This project includes three different demo based on [Lightstreamer - Portfolio D
 <!-- START DESCRIPTION lightstreamer-example-portfolio-client-javascript-basic-portfolio-demo---html-client -->
 
 ![Demo ScreenShot](screen_basicportfolio_large.png)<br>
-An online demonstration is hosted on our servers at:[http://demos.lightstreamer.com/PortfolioDemo_Basic](http://demos.lightstreamer.com/PortfolioDemo_Basic)<br>
+An online demonstration is hosted on our servers at: [http://demos.lightstreamer.com/PortfolioDemo_Basic](http://demos.lightstreamer.com/PortfolioDemo_Basic)<br>
 
 In the Basic Portfolio Demo, a virtual stock portfolio, shared among all the connected users, is displayed.<br>
 By using the "Submit Order" panel, you can buy or sell a stock (identified by an item number), filling in the Quantity field and pressing the proper button. Click on the column headers to sort the grid on different columns.
@@ -27,7 +27,7 @@ The demo includes the following client-side functionalities:
 <!-- START DESCRIPTION lightstreamer-example-portfolio-client-javascript-portfolio-demo---html-client -->
 
 ![Demo ScreenShot](screen_portfolio_large.png)<br>
-An online demonstration is hosted on our servers at:[http://demos.lightstreamer.com/PortfolioDemo](http://demos.lightstreamer.com/PortfolioDemo)<br>
+An online demonstration is hosted on our servers at: [http://demos.lightstreamer.com/PortfolioDemo](http://demos.lightstreamer.com/PortfolioDemo)<br>
 
 This demo application extends the [Basic Portfolio Demo](https://github.com/Weswit/Lightstreamer-example-Portfolio-client-javascript#basic-portfolio-demo---html-client) by combining live stock prices as in the [Stock-List Demos](https://github.com/Weswit/Lightstreamer-example-StockList-client-javascript) with the portfolio contents.
 The columns show: stock name, last price, quantity (number of stocks in the portfolio), countervalue (=price*quantity), time of last price.
@@ -47,8 +47,8 @@ The demo includes the following client-side functionalities:
 ## Dynamic Drop-Down Demo - HTML Client ##
 <!-- START DESCRIPTION lightstreamer-example-portfolio-client-javascript-dynamic-drop-down-demo---html-client -->
 
-![Demo ScreenShot](screen_dropsown_large.png)<br>
-An online demonstration is hosted on our servers at:[http://demos.lightstreamer.com/DropDownDemo](http://demos.lightstreamer.com/DropDownDemo)<br>
+![Demo ScreenShot](screen_dropdown_large.png)<br>
+An online demonstration is hosted on our servers at: [http://demos.lightstreamer.com/DropDownDemo](http://demos.lightstreamer.com/DropDownDemo)<br>
 
 
 This demo application shows a changeable list of items within a normal HTML drop-down menu. The contents of the list change in real time, based on the commands pushed by the Server.<br>
