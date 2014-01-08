@@ -22,6 +22,8 @@ This project includes three different demo based on [Lightstreamer - Portfolio D
   </tr>
 </table>
 
+![Demo ScreenShot](screen_basicportfolio_large.png) [An online demonstration is hosted on our servers at:](http://demos.lightstreamer.com/PortfolioDemo_Basic)
+
 In the Basic Portfolio Demo, a virtual stock portfolio, shared among all the connected users, is displayed.<br>
 By using the "Submit Order" panel, you can buy or sell a stock (identified by an item number), filling in the Quantity field and pressing the proper button. Click on the column headers to sort the grid on different columns.
 The portfolio grid is updated in push mode, for both the columns and the rows (this is the so called "metapush" feature). This portfolio is shared among all the connected users, so you can connect to this demo from different machines (or try at least different browsers on the same machine), then submit orders from one browser and see the updates displayed on another browser.
