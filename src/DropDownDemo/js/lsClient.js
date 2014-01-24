@@ -17,8 +17,12 @@
 //////////////// Connect to current host (or localhost) and configure a StatusWidget
 define(["LightstreamerClient","StatusWidget"],function(LightstreamerClient,StatusWidget) {
     var protocolToUse = document.location.protocol != "file:" ? document.location.protocol : "http:";
-    var lsClient = new LightstreamerClient(protocolToUse+"//localhost:8080","PORTFOLIODEMO");
+    var portToUse = document.location.protocol == "https:" ? "443" : "8080";
+    // in accordance with the port configuration in the factory lightstreamer_conf.xml
+    // (although the https port is not open by the factory lightstreamer_conf.xml)
     
+    var lsClient = new LightstreamerClient(protocolToUse+"//localhost:"+portToUse,"PORTFOLIODEMO");
+
     lsClient.connectionSharing.enableSharing("PortfolioDemoCommonConnection", "ATTACH", "CREATE");
     lsClient.addListener(new StatusWidget("left", "0px", true));
     lsClient.connect();
