@@ -1,18 +1,26 @@
-# Lightstreamer - Portfolio Demos - HTML Clients #
+# Lightstreamer - Portfolio Demos - HTML Clients
+The *Portfolio Demo* simulate a portfolio management: it shows a list of stocks included in a portfolio and provide a simple order entry form. Changes to portfolio contents, due to new orders, are displayed on the page in real time. In addition to that, the *Full Version of the Portfolio Demo* shows for each stock in the portfolio also the current price, updated in real time from a market data feed.
 
-This project includes three different demo based on [Lightstreamer - Portfolio Demo - Java Adapter](https://github.com/Weswit/Lightstreamer-example-Portfolio-adapter-java):
+This project includes three different web client front-end examples for the [Lightstreamer - Portfolio Demo - Java Adapter](https://github.com/Weswit/Lightstreamer-example-Portfolio-adapter-java):
 
 * Basic Portfolio Demo
 * Portfolio Demo
 * Dynamic Drop-Down Demo
 
-## Basic Portfolio Demo - HTML Client ##
+## Basic Portfolio Demo - HTML Client
+
 <!-- START DESCRIPTION lightstreamer-example-portfolio-client-javascript-basic-portfolio-demo---html-client -->
 
-![Demo ScreenShot](screen_basicportfolio_large.png)<br>
-An online demonstration is hosted on our servers at: [http://demos.lightstreamer.com/PortfolioDemo_Basic](http://demos.lightstreamer.com/PortfolioDemo_Basic)<br>
+### Live Demo
 
-In the Basic Portfolio Demo, a virtual stock portfolio, shared among all the connected users, is displayed.<br>
+[![screenshot](screen_basicportfolio_large.png)](http://demos.lightstreamer.com/PortfolioDemo_Basic)
+
+###[![](http://demos.lightstreamer.com/site/img/play.png) View live demo](http://demos.lightstreamer.com/PortfolioDemo_Basic)
+
+## Details
+
+In the Basic Portfolio Demo, a virtual stock portfolio, shared among all the connected users, is displayed.
+
 By using the "Submit Order" panel, you can buy or sell a stock (identified by an item number), filling in the Quantity field and pressing the proper button. Click on the column headers to sort the grid on different columns.
 The portfolio grid is updated in push mode, for both the columns and the rows (this is the so called "metapush" feature). This portfolio is shared among all the connected users, so you can connect to this demo from different machines (or try at least different browsers on the same machine), then submit orders from one browser and see the updates displayed on another browser.
 The front-end code can be considered a reference example of item subscriptions in COMMAND mode.
