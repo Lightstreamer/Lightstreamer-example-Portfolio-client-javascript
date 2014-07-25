@@ -21,7 +21,7 @@ define(["LightstreamerClient","StatusWidget"],function(LightstreamerClient,Statu
     // in accordance with the port configuration in the factory lightstreamer_conf.xml
     // (although the https port is not open by the factory lightstreamer_conf.xml)
     
-    var lsClient = new LightstreamerClient(protocolToUse+"//localhost:"+portToUse,"DEMO");
+    var lsClient = new LightstreamerClient(protocolToUse+"//localhost:"+portToUse,"FULLPORTFOLIODEMO");
     
     lsClient.connectionSharing.enableSharing("PortfolioDemoCommonConnection", "ATTACH", "CREATE");
     lsClient.addListener(new StatusWidget("left", "0px", true));
