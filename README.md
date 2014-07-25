@@ -17,6 +17,8 @@ This project includes three different web client front-end examples for the [Lig
 
 ###[![](http://demos.lightstreamer.com/site/img/play.png) View live demo](http://demos.lightstreamer.com/PortfolioDemo_Basic)
 
+*Note. Real-Time simulated Portfolio data is received from the Lightstreamer Server deployed at [http://push.lightstreamer.com](http://push.lightstreamer.com).*
+
 ### Details
 
 In the Basic Portfolio Demo, a virtual stock portfolio, shared among all the connected users, is displayed.
@@ -39,6 +41,8 @@ The demo includes the following client-side functionalities:
 [![screenshot](screen_portfolio_large.png)](http://demos.lightstreamer.com/PortfolioDemo)
 
 ###[![](http://demos.lightstreamer.com/site/img/play.png) View live demo](http://demos.lightstreamer.com/PortfolioDemo)
+
+*Note. Real-Time simulated Portfolio data is received from the Lightstreamer Server deployed at [http://push.lightstreamer.com](http://push.lightstreamer.com).*
 
 ### Details
 
@@ -65,6 +69,8 @@ The demo includes the following client-side functionalities:
 [![screenshot](screen_dropdown_large.png)](http://demos.lightstreamer.com/DropDownDemo)
 
 ###[![](http://demos.lightstreamer.com/site/img/play.png) View live demo](http://demos.lightstreamer.com/DropDownDemo)
+
+*Note. Real-Time simulated Portfolio data is received from the Lightstreamer Server deployed at [http://push.lightstreamer.com](http://push.lightstreamer.com).*
 
 ### Details
 
