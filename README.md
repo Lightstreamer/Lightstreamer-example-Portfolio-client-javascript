@@ -92,7 +92,10 @@ needs both the *PORTFOLIO_ADAPTER*, from the *Portfolio Demo*, and the *QUOTE_AD
     * The client demo configuration assumes that Lightstreamer Server, Lightstreamer Adapters and these clients are launched on the same machine. If you need to target a different Lightstreamer server, please search in `src/[demo_name]/js/lsClient.js` this line:<BR/> 
 `var lsClient = new LightstreamerClient(protocolToUse+"//localhost:"+portToUse,"PORTFOLIODEMO");`<BR/>
 and change it accordingly.
-* Open your browser and point it to:  [http://localhost:8080/demos/PortfolioDemo_Basic/](http://localhost:8080/demos/PortfolioDemo_Basic/), [http://localhost:8080/demos/PortfolioDemo/](http://localhost:8080/demos/PortfolioDemo/) and [http://localhost:8080/demos/DropDownDemo/](http://localhost:8080/demos/DropDownDemo/).
+* Open your browser and point it to:  
+    * [http://localhost:8080/demos/PortfolioDemo_Basic/](http://localhost:8080/demos/PortfolioDemo_Basic/),
+    * [http://localhost:8080/demos/PortfolioDemo/](http://localhost:8080/demos/PortfolioDemo/) and
+    * [http://localhost:8080/demos/DropDownDemo/](http://localhost:8080/demos/DropDownDemo/).
 
 ## See Also
 
