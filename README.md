@@ -91,8 +91,7 @@ needs both the *PORTFOLIO_ADAPTER*, from the *Portfolio Demo*, and the *QUOTE_AD
     * create the folder `<LS_HOME>/pages/PortfolioDemo`, and copy here the contents of the `src/PortfolioDemo` folder;
     * create the folder `<LS_HOME>/pages/DropDownDemo`, and copy here the contents of the `src/DropDownDemo` folder.
     * The client demo configuration assumes that Lightstreamer Server, Lightstreamer Adapters and these clients are launched on the same machine. If you need to target a different Lightstreamer server, please edit the `src/[demo_name]/js/lsClient.js` file and change accordingly the following line:<BR/> 
-`var lsClient = new LightstreamerClient(protocolToUse+"//localhost:"+portToUse,"PORTFOLIODEMO");`<BR/>
-and change it accordingly.
+`var lsClient = new LightstreamerClient(protocolToUse+"//localhost:"+portToUse,"PORTFOLIODEMO");`
 * Open your browser and point it to:  
     * [http://localhost:8080/PortfolioDemo_Basic/](http://localhost:8080/PortfolioDemo_Basic/),
     * [http://localhost:8080/PortfolioDemo/](http://localhost:8080/PortfolioDemo/) and
