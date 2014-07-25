@@ -3,9 +3,9 @@ The *Portfolio Demo* simulate a portfolio management: it shows a list of stocks 
 
 This project includes three different web client front-end examples for the [Lightstreamer - Portfolio Demo - Java Adapter](https://github.com/Weswit/Lightstreamer-example-Portfolio-adapter-java):
 
-* Basic Portfolio Demo
-* Portfolio Demo
-* Dynamic Drop-Down Demo
+* [Basic Portfolio Demo](https://github.com/Weswit/Lightstreamer-example-Portfolio-client-javascript#basic-portfolio-demo---html-client)
+* [Portfolio Demo](https://github.com/Weswit/Lightstreamer-example-Portfolio-client-javascript#portfolio-demo---html-client)
+* [Dynamic Drop-Down Demo](https://github.com/Weswit/Lightstreamer-example-Portfolio-client-javascript#dynamic-drop-down-demo---html-client)
 
 ## Basic Portfolio Demo - HTML Client
 
@@ -81,28 +81,16 @@ The demo includes the following client-side functionalities:
 ## Install
 If you want to install one of these demo versions pointing to your local Lightstreamer Server, follow the steps below.
 
-* As prerequisite, the [Lightstreamer - Portfolio Demo - Java Adapter](https://github.com/Weswit/Lightstreamer-example-Portfolio-adapter-java) has to be deployed on your local Lightstreamer Server instance. The full version of the *Portfolio Demo*,
+* As prerequisite, the [Lightstreamer - Portfolio Demo - Java Adapter](https://github.com/Weswit/Lightstreamer-example-Portfolio-adapter-java) has to be deployed on your local Lightstreamer Server instance. Moreover, the full version of the *Portfolio Demo*,
 needs both the *PORTFOLIO_ADAPTER*, from the *Portfolio Demo*, and the *QUOTE_ADAPTER*, from the *Stock-List Demo* (see [Lightstreamer - Stock-List Demo - Java Adapter](https://github.com/Weswit/Lightstreamer-example-StockList-adapter-java)). Please check out the [Lightstreamer - Portfolio Demo - Java Adapter](https://github.com/Weswit/Lightstreamer-example-Portfolio-adapter-java) project and follow the [installation instructions for the full version of the *Portfolio Demo*](https://github.com/Weswit/Lightstreamer-example-Portfolio-adapter-java#portfolio-demo).
 * Download this project.
 * Get the `lightstreamer.js` file from the [latest Lightstreamer distribution](http://www.lightstreamer.com/download) and put it in the `src/[demo_name]/js` folder of the demo. Alternatively you can build a `lightstreamer.js` file from the [online generator](http://www.lightstreamer.com/distros/Lightstreamer_Allegro-Presto-Vivace_5_0_Colosseo_20120803/Lightstreamer/DOCS-SDKs/sdk_client_javascript/tools/generator.html). In that case be sure to include the LightstreamerClient, Subscription, DynaGrid and StatusWidget modules and to use the "Use AMD" version.
 * Get the `require.js` file form the [requirejs.org](http://requirejs.org/docs/download.html) and put it in the `src/[demo_name]/js` folder of the demo.
 * Deploy this demo on the Lightstreamer Server (used as Web server) or in any external Web Server. If you choose the former, please note that in the `<LS_HOME>/pages/demos/` folder there may be already a `PortfolioDemo` or a `PortfolioDemo_Basic` or a `DropDownDemo` folders. If this is not your case please create the folders `<LS_HOME>/pages/demos/PortfolioDemo`, `<LS_HOME>/pages/demos/PortfolioDemo_Basic`, and `<LS_HOME>/pages/demos/DropDownDemo`, and copy here the contents of the `src/PortfolioDemo`, `src/PortfolioDemo_Basic`, and `src/DropDownDemo` folders of this project.
-The client demo configuration assumes that Lightstreamer Server, Lightstreamer Adapters and this client are launched on the same machine. If you need to targeting a different Lightstreamer server please search in `js/lsClient.js` this line:<BR/> 
+The client demo configuration assumes that Lightstreamer Server, Lightstreamer Adapters and these clients are launched on the same machine. If you need to targeting a different Lightstreamer server please search in `src/[demo_name]/js/lsClient.js` this line:<BR/> 
 `var lsClient = new LightstreamerClient(protocolToUse+"//localhost:"+portToUse,"PORTFOLIODEMO");`<BR/>
 and change it accordingly.
 * Open your browser and point it to:  [http://localhost:8080/demos/PortfolioDemo_Basic/](http://localhost:8080/demos/PortfolioDemo_Basic/), [http://localhost:8080/demos/PortfolioDemo/](http://localhost:8080/demos/PortfolioDemo/) and [http://localhost:8080/demos/DropDownDemo/](http://localhost:8080/demos/DropDownDemo/).
-
-You can deploy these demos in order to use the Lightstreamer server as Web server or in any external Web Server you are running. 
-If you choose the former case please note that in the <LS_HOME>/pages/demos/ folder there is a copy of the src/PortfolioDemo, src/PortfolioDemo_Basic, and src/DropDownDemo directories of this project (If it is not your case, please create the folders <LS_HOME>/pages/demos/PortfolioDemo, <LS_HOME>/pages/demos/PortfolioDemo_Basic, and <LS_HOME>/pages/demos/DropDownDemo then copy here the contents of the src/PortfolioDemo, src/PortfolioDemo_Basic, and src/DropDownDemo folders of this project). The client demos configuration assume that Lightstreamer Server, Lightstreamer Adapters and this client are launched on the same machine.
-If you need to targeting a different Lightstreamer server please search this line in lsClient.js:
-```js
-var lsClient = new LightstreamerClient(protocolToUse+"//localhost:"+portToUse,"PORTFOLIODEMO");
-```
-and change it accordingly.
-
-Anyway the [PORTFOLIO_ADAPTER](https://github.com/Weswit/Lightstreamer-example-Portfolio-adapter-java), [QUOTE_ADAPTER](https://github.com/Weswit/Lightstreamer-example-Stocklist-adapter-java) (only for PortfolioDemo), and [PortfolioMetadataAdapter](https://github.com/Weswit/Lightstreamer-example-Portfolio-adapter-java) have to be deployed in your local Lightstreamer server instance. The factory configuration of Lightstreamer server already provides this adapters deployed.<br>
-The demos are now ready to be launched.
-
 
 ## See Also
 
@@ -122,3 +110,4 @@ The demos are now ready to be launched.
 ## Lightstreamer Compatibility Notes
 
 - Compatible with Lightstreamer JavaScript Client library version 6.0 or newer.
+
