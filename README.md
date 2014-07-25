@@ -87,8 +87,9 @@ needs both the *PORTFOLIO_ADAPTER*, from the *Portfolio Demo*, and the *QUOTE_AD
 * Get the `lightstreamer.js` file from the [latest Lightstreamer distribution](http://www.lightstreamer.com/download) and put it in the `src/[demo_name]/js` folder of the demo. Alternatively you can build a `lightstreamer.js` file from the [online generator](http://www.lightstreamer.com/distros/Lightstreamer_Allegro-Presto-Vivace_5_0_Colosseo_20120803/Lightstreamer/DOCS-SDKs/sdk_client_javascript/tools/generator.html). In that case be sure to include the LightstreamerClient, Subscription, DynaGrid and StatusWidget modules and to use the "Use AMD" version.
 * Get the `require.js` file form the [requirejs.org](http://requirejs.org/docs/download.html) and put it in the `src/[demo_name]/js` folder of the demo.
 * Deploy this demo on the Lightstreamer Server (used as Web server) or in any external Web Server. If you choose the former, please note that in the `<LS_HOME>/pages/demos/` folder there may be already a `PortfolioDemo` or a `PortfolioDemo_Basic` or a `DropDownDemo` folders. If this is not your case, please follow these steps:
-    * create the folders `<LS_HOME>/pages/demos/PortfolioDemo`, `<LS_HOME>/pages/demos/PortfolioDemo_Basic`, and `<LS_HOME>/pages/demos/DropDownDemo`, 
-    * copy here the contents of the `src/PortfolioDemo`, `src/PortfolioDemo_Basic`, and `src/DropDownDemo` folders of this project.
+    * create the folder `<LS_HOME>/pages/demos/PortfolioDemo_Basic`, and copy here the contents of the `src/PortfolioDemo_Basic` folder;
+    * create the folder `<LS_HOME>/pages/demos/PortfolioDemo`, and copy here the contents of the `src/PortfolioDemo` folder;
+    * create the folder `<LS_HOME>/pages/demos/DropDownDemo`, and copy here the contents of the `src/DropDownDemo` folder.
     * The client demo configuration assumes that Lightstreamer Server, Lightstreamer Adapters and these clients are launched on the same machine. If you need to target a different Lightstreamer server, please search in `src/[demo_name]/js/lsClient.js` this line:<BR/> 
 `var lsClient = new LightstreamerClient(protocolToUse+"//localhost:"+portToUse,"PORTFOLIODEMO");`<BR/>
 and change it accordingly.
