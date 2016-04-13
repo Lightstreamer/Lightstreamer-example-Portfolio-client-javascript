@@ -139,6 +139,7 @@ If you want to install the *Dynamic Drop-Down Demo*, pointing to your local Ligh
 
 ### Related Projects
 
+* [Lightstreamer - Portfolio Demo - .NET Client](https://github.com/Lightstreamer/Lightstreamer-example-Portfolio-client-dotnet)
 * [Lightstreamer - Portfolio Demo - Flex Client](https://github.com/Lightstreamer/Lightstreamer-example-Portfolio-client-flex)
 * [Lightstreamer - Stock-List Demos - HTML Clients](https://github.com/Lightstreamer/Lightstreamer-example-Stocklist-client-javascript)
 
