@@ -94,7 +94,7 @@ If you want to install the *Basic Portfolio Demo*, pointing to your local Lights
 * Get the `lightstreamer.js` file from [npm](https://www.npmjs.com/package/lightstreamer-client-web) or [unpkg](https://unpkg.com/lightstreamer-client-web/lightstreamer.js) and put it in the `src/PortfolioDemo_Basic/js` folder of the project.
   Alternatively, you can generate a customized lightstreamer.js library containing only the classes you actually use;
   see the build instructions on the [GitHub page](https://github.com/Lightstreamer/Lightstreamer-lib-client-javascript#building).
-  In that case, be sure to include the LightstreamerClient, Subscription, DynaGrid, ConnectionSharing, and StatusWidget modules and to use the "Use AMD" version.
+  In that case, be sure to include the LightstreamerClient, Subscription, DynaGrid, ConnectionSharing, and StatusWidget modules.
 * Get the `require.js` file form [requirejs.org](http://requirejs.org/docs/download.html) and put it in the `src/PortfolioDemo_Basic/js` folder of the project.
 * Deploy this demo on the Lightstreamer Server (used as Web server) or in any external Web Server. If you choose the former, please note that in the `<LS_HOME>/pages/demos/` folder, there may already be a `PortfolioDemo_Basic` folder. If this is not your case, please follow these steps:
     * create the folder `<LS_HOME>/pages/PortfolioDemo_Basic`, and copy here the contents of the `src/PortfolioDemo_Basic` folder;
@@ -111,7 +111,7 @@ If you want to install the *full version of the Portfolio Demo*, pointing to you
 * Get the `lightstreamer.js` file from [npm](https://www.npmjs.com/package/lightstreamer-client-web) or [unpkg](https://unpkg.com/lightstreamer-client-web/lightstreamer.js) and put it in the `src/PortfolioDemo/js` folder of the project.
   Alternatively, you can generate a customized lightstreamer.js library containing only the classes you actually use;
   see the build instructions on the [GitHub page](https://github.com/Lightstreamer/Lightstreamer-lib-client-javascript#building).
-  In that case, be sure to include the LightstreamerClient, Subscription, DynaGrid, ConnectionSharing, and StatusWidget modules and to use the "Use AMD" version.
+  In that case, be sure to include the LightstreamerClient, Subscription, DynaGrid, ConnectionSharing, and StatusWidget modules.
 * Get the `require.js` file form [requirejs.org](http://requirejs.org/docs/download.html) and put it in the `src/PortfolioDemo/js` folder of the project.
 * Deploy this demo on the Lightstreamer Server (used as Web server) or in any external Web Server. If you choose the former, please note that in the `<LS_HOME>/pages/demos/` folder, there may already be a `PortfolioDemo` folder. If this is not your case, please follow these steps:
     * create the folder `<LS_HOME>/pages/PortfolioDemo`, and copy here the contents of the `src/PortfolioDemo` folder.
@@ -128,7 +128,7 @@ If you want to install the *Dynamic Drop-Down Demo*, pointing to your local Ligh
 * Get the `lightstreamer.js` file from [npm](https://www.npmjs.com/package/lightstreamer-client-web) or [unpkg](https://unpkg.com/lightstreamer-client-web/lightstreamer.js) and put it in the `src/DropDownDemo/js` folder of the project.
   Alternatively, you can generate a customized lightstreamer.js library containing only the classes you actually use;
   see the build instructions on the [GitHub page](https://github.com/Lightstreamer/Lightstreamer-lib-client-javascript#building).
-  In that case, be sure to include the LightstreamerClient, Subscription, DynaGrid, ConnectionSharing, and StatusWidget modules and to use the "Use AMD" version.
+  In that case, be sure to include the LightstreamerClient, Subscription, DynaGrid, ConnectionSharing, and StatusWidget modules.
 * Get the `require.js` file form [requirejs.org](http://requirejs.org/docs/download.html) and put it in the `src/DropDownDemo/js` folder of the project.
 * Deploy this demo on the Lightstreamer Server (used as Web server) or in any external Web Server. If you choose the former, please note that in the `<LS_HOME>/pages/demos/` folder, there may already be a `DropDownDemo` folder. If this is not your case, please follow these steps:
     * create the folder `<LS_HOME>/pages/DropDownDemo`, and copy here the contents of the `src/DropDownDemo` folder.
