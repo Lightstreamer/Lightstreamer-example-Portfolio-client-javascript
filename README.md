@@ -13,7 +13,7 @@ This project includes three different web client front-end examples for the [Lig
 
 ### Live Demo
 
-[![screenshot](screen_basicportfolio_large.png)](http://demos.lightstreamer.com/PortfolioDemo_Basic)
+[![screenshot](screen_basicportfolio_large.png)](https://demos.lightstreamer.com/PortfolioDemo_Basic/)
 
 ### [![](http://demos.lightstreamer.com/site/img/play.png) View live demo](http://demos.lightstreamer.com/PortfolioDemo_Basic)
 
@@ -40,7 +40,7 @@ The demo includes the following client-side functionalities:
 
 [![screenshot](screen_portfolio_large.png)](http://demos.lightstreamer.com/PortfolioDemo)
 
-### [![](http://demos.lightstreamer.com/site/img/play.png) View live demo](http://demos.lightstreamer.com/PortfolioDemo)
+### [![](http://demos.lightstreamer.com/site/img/play.png) View live demo](https://demos.lightstreamer.com/PortfolioDemo/)
 
 *Note. Real-time simulated Portfolio data is received from the Lightstreamer Server deployed at [http://push.lightstreamer.com](http://push.lightstreamer.com).*
 
@@ -68,7 +68,7 @@ The demo includes the following client-side functionalities:
 
 [![screenshot](screen_dropdown_large.png)](http://demos.lightstreamer.com/DropDownDemo)
 
-### [![](http://demos.lightstreamer.com/site/img/play.png) View live demo](http://demos.lightstreamer.com/DropDownDemo)
+### [![](http://demos.lightstreamer.com/site/img/play.png) View live demo](https://demos.lightstreamer.com/DropDownDemo/)
 
 *Note. Real-time simulated Portfolio data is received from the Lightstreamer Server deployed at [http://push.lightstreamer.com](http://push.lightstreamer.com).*
 
