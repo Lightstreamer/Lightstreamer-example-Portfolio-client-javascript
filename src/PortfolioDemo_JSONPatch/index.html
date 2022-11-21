@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<!--
+  LIGHTSTREAMER - www.lightstreamer.com
+  JSON Patch Portfolio Demo
+  
+  Copyright (c) Lightstreamer Srl
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <title>Lightstreamer :: JSON Patch Portfolio Demo</title>
+  <link href="https://unpkg.com/jquery.json-viewer@1.5.0/json-viewer/jquery.json-viewer.css" type="text/css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/portfolio.css" />
+</head>
+
+<body>
+  <a href="https://github.com/Lightstreamer/Lightstreamer-example-Portfolio-client-javascript"><img style="position: absolute; top: 0; right: 0; border: 0; z-index:1" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
+  <div id="wrap">
+    <table width="340" border="0">  
+      <tr>
+        <td><a href="http://www.lightstreamer.com" target="_blank">
+          <img src="images/logo-dark.svg" alt="LIGHTSTREAMER" width="231" height="60" hspace="0" border="0" /></a></td>
+        <td class="demoTitle">JSON Patch Portfolio Demo</td>
+      </tr>
+    </table>
+
+    <br />
+
+    <!-- order entry section; see management code in buysell.js -->
+    <form onSubmit="return false;">
+      <table width="340" border="0" cellpadding="2" cellspacing="0">
+        <tr class="tableTitle">
+          <td colspan="3">Submit Order</td>
+        </tr>
+        <tr class="inputPanel">
+          <td width="80">
+            <select id="stockN" type="select" style="font-size: 8pt"></select>
+          </td>
+          <td width="130">
+            Quantity: <input id="qtyN" type="text" size="8" style="font-size: 8pt" />
+          </td>
+          <td width="130" style="text-align: center;">
+            <input type="submit" id="buy" disabled value="Buy" onclick="submitForm('BUY')" />&nbsp;&nbsp;
+            <input type="submit" id="sell" disabled value="Sell" onclick="submitForm('SELL')" />
+          </td>
+        </tr>
+      </table>
+    </form>
+
+    <p class="note">
+      Use the red panel to <b>BUY</b> and <b>SELL</b> stocks.
+    </p>
+
+    <br />
+      
+    <!-- portfolio tree; see Lightstreamer-related code in portfolio.js -->
+    <span style="visibility: hidden">
+        <p>ORIGINAL DATA</p>
+        <pre id="original">ORIGINAL</pre>
+    </span>
+    <table>
+        <tr style="vertical-align: top">
+            <td>
+                <p>PORTFOLIO</p>
+                <pre id="json-tree">JSON TREE</pre>
+            </td>
+            <td>
+                <p>LAST UPDATE AS JSON PATCH</p>
+                <pre id="json-patch-tree">JSON PATCH</pre>
+            </td>
+        </tr>
+    </table>
+  </div>
+
+<script src="js/require.js"></script>
+<script src="js/lightstreamer.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://unpkg.com/jquery.json-viewer@1.5.0/json-viewer/jquery.json-viewer.js"></script>
+
+<!-- order entry section management -->
+<script src="js/buysell.js" type="text/javascript"></script>
+
+<!-- portfolio tree management -->
+<script src="js/portfolio.js" type="text/javascript"></script>
+
+</body>
+
+</html>

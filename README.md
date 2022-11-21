@@ -5,6 +5,7 @@ This project includes three different web client front-end examples for the [Lig
 
 * [Basic Portfolio Demo](https://github.com/Lightstreamer/Lightstreamer-example-Portfolio-client-javascript#basic-portfolio-demo---html-client)
 * [Portfolio Demo](https://github.com/Lightstreamer/Lightstreamer-example-Portfolio-client-javascript#portfolio-demo---html-client)
+* [JSON Patch Portfolio Demo](https://github.com/Lightstreamer/Lightstreamer-example-Portfolio-client-javascript#jsonpatch-portfolio-demo---html-client)
 * [Dynamic Drop-Down Demo](https://github.com/Lightstreamer/Lightstreamer-example-Portfolio-client-javascript#dynamic-drop-down-demo---html-client)
 
 ## Basic Portfolio Demo - HTML Client
@@ -61,6 +62,26 @@ The demo includes the following client-side functionalities:
 
 <!-- END DESCRIPTION lightstreamer-example-portfolio-client-javascript-portfolio-demo---html-client -->
 
+## JSON Patch Portfolio Demo - HTML Client
+
+<!-- START DESCRIPTION lightstreamer-example-portfolio-client-javascript-jsonpatch-portfolio-demo---html-client -->
+
+### Details
+
+This demo application is similar to the [Basic Portfolio Demo](https://github.com/Lightstreamer/Lightstreamer-example-Portfolio-client-javascript#basic-portfolio-demo---html-client), but the portfolio contents are received in JSON format and displayed as a tree.
+Note that the use of JSON is not the recommended way to supply tabular data like this, but it may be needed to handle more complex structures.
+
+The portfolio content is the same as the [Basic Portfolio Demo](https://github.com/Lightstreamer/Lightstreamer-example-Portfolio-client-javascript#basic-portfolio-demo---html-client) (i.e., it subscribes to the same item name through a different Data Adapter, which however shares the same feed simulator) and it is shared among all the connected users. Again, you can connect to this demo from different machines and see your operations propagated everywhere.
+
+Again, the portfolio is updated in push mode, but, whenever possible, the updates are sent by the Server as a JSON Patch, so that only the changes are sent. In this case, the latest JSON Patch received is also displayed as a tree.
+
+The demo includes the following client-side functionalities:
+* A [Subscription](https://lightstreamer.com/api/ls-web-client/latest/Subscription.html) containing 1 item, subscribed to in <b>MERGE</b> mode.
+* The received JSON Patch is obtained with the [getValueAsJSONPatchIfAvailable](https://lightstreamer.com/api/ls-web-client/8.2.0-beta3/ItemUpdate.html#getValueAsJSONPatchIfAvailable) interface method, currently available only on the 8.2 beta version of the Web Client SDK.
+* The order submission is done by sending a message directly to Lightstreamer Server using the [LightstreamerClient.sendMessage](https://lightstreamer.com/api/ls-web-client/latest/LightstreamerClient.html#sendMessage) utility.
+
+<!-- END DESCRIPTION lightstreamer-example-portfolio-client-javascript-jsonpatch-portfolio-demo---html-client -->
+
 ## Dynamic Drop-Down Demo - HTML Client 
 <!-- START DESCRIPTION lightstreamer-example-portfolio-client-javascript-dynamic-drop-down-demo---html-client -->
 
@@ -87,6 +108,7 @@ The demo includes the following client-side functionalities:
 ## Install
 
 ### Install the Basic Portfolio Demo
+
 If you want to install the *Basic Portfolio Demo*, pointing to your local Lightstreamer Server, follow the steps below.
 
 * As prerequisite, the basic version of the [Lightstreamer - Portfolio Demo - Java Adapter](https://github.com/Lightstreamer/Lightstreamer-example-Portfolio-adapter-java) has to be deployed on your local Lightstreamer Server instance. Please follow the instructions in [Install the Basic Portfolio Demo](https://github.com/Lightstreamer/Lightstreamer-example-Portfolio-adapter-java#install-the-basic-portfolio-demo) to install it.
@@ -98,7 +120,7 @@ If you want to install the *Basic Portfolio Demo*, pointing to your local Lights
 * Get the `require.js` file form [requirejs.org](http://requirejs.org/docs/download.html) and put it in the `src/PortfolioDemo_Basic/js` folder of the project.
 * Deploy this demo on the Lightstreamer Server (used as Web server) or in any external Web Server. Please follow these steps:
     * create the folder `<LS_HOME>/pages/PortfolioDemo_Basic`, and copy here the contents of the `src/PortfolioDemo_Basic` folder;
-    * The client demo configuration assumes that Lightstreamer Server, Lightstreamer Adapters, and this lient are launched on the same machine. If you need to target a different Lightstreamer server, please edit the `src/PortfolioDemo_Basic/js/lsClient.js` file and change accordingly the following line:<BR/> 
+    * The client demo configuration assumes that Lightstreamer Server, Lightstreamer Adapters, and this client are launched on the same machine. If you need to target a different Lightstreamer server, please edit the `src/PortfolioDemo_Basic/js/lsClient.js` file and change accordingly the following line:<BR/> 
 `var lsClient = new LightstreamerClient(protocolToUse+"//localhost:"+portToUse,"PORTFOLIODEMO");`
 * Open your browser and point it to: http://localhost:8080/PortfolioDemo_Basic/](http://localhost:8080/PortfolioDemo_Basic/).
 
@@ -118,6 +140,20 @@ If you want to install the *full version of the Portfolio Demo*, pointing to you
     * The client demo configuration assumes that Lightstreamer Server, Lightstreamer Adapters, and these clients are launched on the same machine. If you need to target a different Lightstreamer server, please edit the `src/PortfolioDemo/js/lsClient.js` file and change accordingly the following line:<BR/> 
 `var lsClient = new LightstreamerClient(protocolToUse+"//localhost:"+portToUse,"FULLPORTFOLIODEMO");`
 * Open your browser and point it to: [http://localhost:8080/PortfolioDemo/](http://localhost:8080/PortfolioDemo/).
+
+### Install the JSON Patch Portfolio Demo
+
+If you want to install the *JSON Patch Portfolio Demo*, pointing to your local Lightstreamer Server, follow the steps below.
+
+* As prerequisite, the JSON version of the [Lightstreamer - Portfolio Demo - Java Adapter](https://github.com/Lightstreamer/Lightstreamer-example-Portfolio-adapter-java) has to be deployed on your local Lightstreamer Server instance. Please follow the instructions in [Install the JSON Patch Portfolio Demo](https://github.com/Lightstreamer/Lightstreamer-example-Portfolio-adapter-java#install-the-json-patch-portfolio-demo) to install it.
+* Download this project.
+* Get the `lightstreamer.min.js` file of the 8.2 beta version of the web client SDK from [npm](https://www.npmjs.com/package/lightstreamer-client-web/v/8.2.0-beta3) or [unpkg](https://unpkg.com/lightstreamer-client-web@8.2.0-beta3/lightstreamer.min.js) and put it in the `src/PortfolioDemo_JSONPatch/js` folder of the project.
+* Get the `require.js` file form [requirejs.org](http://requirejs.org/docs/download.html) and put it in the `src/PortfolioDemo_JSONPatch/js` folder of the project.
+* Deploy this demo on the Lightstreamer Server (used as Web server) or in any external Web Server. Please follow these steps:
+    * create the folder `<LS_HOME>/pages/PortfolioDemo_JSONPatch`, and copy here the contents of the `src/PortfolioDemo_JSONPatch` folder;
+    * The client demo configuration assumes that Lightstreamer Server, Lightstreamer Adapters, and this client are launched on the same machine. If you need to target a different Lightstreamer server, please edit the `src/PortfolioDemo_JSONPatch/js/lsClient.js` file and change accordingly the following line:<BR/> 
+`var lsClient = new LightstreamerClient(protocolToUse+"//localhost:"+portToUse,"JSONPORTFOLIODEMO");`
+* Open your browser and point it to: http://localhost:8080/PortfolioDemo_JSONPatch/](http://localhost:8080/PortfolioDemo_JSONPatch/).
 
 ### Install the Dynamic Drop-Down Demo
 
@@ -155,3 +191,4 @@ If you want to install the *Dynamic Drop-Down Demo*, pointing to your local Ligh
 ## Lightstreamer Compatibility Notes
 
 - Compatible with Lightstreamer JavaScript Client library version 6.0 or newer (installation instructions for version 8.0 or newer).
+- As an exception, the JSON Patch demo is compatible with Lightstreamer JavaScript Client library version 8.2 beta or newer.
