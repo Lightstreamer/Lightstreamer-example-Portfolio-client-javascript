@@ -96,7 +96,7 @@ If you want to install the *Basic Portfolio Demo*, pointing to your local Lights
   see the build instructions on the [GitHub page](https://github.com/Lightstreamer/Lightstreamer-lib-client-javascript#building).
   In that case, be sure to include the LightstreamerClient, Subscription, DynaGrid, ConnectionSharing, and StatusWidget modules.
 * Get the `require.js` file form [requirejs.org](http://requirejs.org/docs/download.html) and put it in the `src/PortfolioDemo_Basic/js` folder of the project.
-* Deploy this demo on the Lightstreamer Server (used as Web server) or in any external Web Server. If you choose the former, please note that in the `<LS_HOME>/pages/demos/` folder, there may already be a `PortfolioDemo_Basic` folder. If this is not your case, please follow these steps:
+* Deploy this demo on the Lightstreamer Server (used as Web server) or in any external Web Server. Please follow these steps:
     * create the folder `<LS_HOME>/pages/PortfolioDemo_Basic`, and copy here the contents of the `src/PortfolioDemo_Basic` folder;
     * The client demo configuration assumes that Lightstreamer Server, Lightstreamer Adapters, and this lient are launched on the same machine. If you need to target a different Lightstreamer server, please edit the `src/PortfolioDemo_Basic/js/lsClient.js` file and change accordingly the following line:<BR/> 
 `var lsClient = new LightstreamerClient(protocolToUse+"//localhost:"+portToUse,"PORTFOLIODEMO");`
@@ -113,7 +113,7 @@ If you want to install the *full version of the Portfolio Demo*, pointing to you
   see the build instructions on the [GitHub page](https://github.com/Lightstreamer/Lightstreamer-lib-client-javascript#building).
   In that case, be sure to include the LightstreamerClient, Subscription, DynaGrid, ConnectionSharing, and StatusWidget modules.
 * Get the `require.js` file form [requirejs.org](http://requirejs.org/docs/download.html) and put it in the `src/PortfolioDemo/js` folder of the project.
-* Deploy this demo on the Lightstreamer Server (used as Web server) or in any external Web Server. If you choose the former, please note that in the `<LS_HOME>/pages/demos/` folder, there may already be a `PortfolioDemo` folder. If this is not your case, please follow these steps:
+* Deploy this demo on the Lightstreamer Server (used as Web server) or in any external Web Server. Please follow these steps:
     * create the folder `<LS_HOME>/pages/PortfolioDemo`, and copy here the contents of the `src/PortfolioDemo` folder.
     * The client demo configuration assumes that Lightstreamer Server, Lightstreamer Adapters, and these clients are launched on the same machine. If you need to target a different Lightstreamer server, please edit the `src/PortfolioDemo/js/lsClient.js` file and change accordingly the following line:<BR/> 
 `var lsClient = new LightstreamerClient(protocolToUse+"//localhost:"+portToUse,"FULLPORTFOLIODEMO");`
@@ -130,7 +130,7 @@ If you want to install the *Dynamic Drop-Down Demo*, pointing to your local Ligh
   see the build instructions on the [GitHub page](https://github.com/Lightstreamer/Lightstreamer-lib-client-javascript#building).
   In that case, be sure to include the LightstreamerClient, Subscription, DynaGrid, ConnectionSharing, and StatusWidget modules.
 * Get the `require.js` file form [requirejs.org](http://requirejs.org/docs/download.html) and put it in the `src/DropDownDemo/js` folder of the project.
-* Deploy this demo on the Lightstreamer Server (used as Web server) or in any external Web Server. If you choose the former, please note that in the `<LS_HOME>/pages/demos/` folder, there may already be a `DropDownDemo` folder. If this is not your case, please follow these steps:
+* Deploy this demo on the Lightstreamer Server (used as Web server) or in any external Web Server. Please follow these steps:
     * create the folder `<LS_HOME>/pages/DropDownDemo`, and copy here the contents of the `src/DropDownDemo` folder.
     * The client demo configuration assumes that Lightstreamer Server, Lightstreamer Adapters, and these clients are launched on the same machine. If you need to target a different Lightstreamer server, please edit the `src/DropDownDemo/js/lsClient.js` file and change accordingly the following line:<BR/> 
 `var lsClient = new LightstreamerClient(protocolToUse+"//localhost:"+portToUse,"PORTFOLIODEMO");`
