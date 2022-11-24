@@ -38,14 +38,6 @@ body {
   font-weight: bold;
   text-align: center;
 }
-.tableTitleSorted {
-  font-family: Verdana, Arial, Helvetica, sans-serif;
-  font-size: 7pt;
-  color: #ffffff;
-  background: #00cc00;
-  font-weight: bold;
-  text-align: center;
-}
 .inputPanel {
   font-family: Verdana, Arial, Helvetica, sans-serif;
   font-size: 7pt;
@@ -61,38 +53,6 @@ body {
   color: #00ff00;
   font-weight: normal;
   text-align: left;
-}
-.lshot {
-  font-family: Verdana, Arial, Helvetica, sans-serif;
-  font-size: 8pt;
-  color: #000000;
-  background: #ffff66;
-  font-weight: normal;
-  nowrap: nowrap;
-}
-.lscold {
-  font-family: Verdana, Arial, Helvetica, sans-serif;
-  font-size: 8pt;
-  color: #000000;
-  background: #ddffaa;
-  font-weight: normal;
-  nowrap: nowrap;
-}
-.commandhot {
-  font-family: Verdana, Arial, Helvetica, sans-serif;
-  font-size: 8pt;
-  font-style: italic;
-  color: #000000;
-  background: #ffff66;
-  font-weight: normal;
-}
-.commandcold {
-  font-family: Verdana, Arial, Helvetica, sans-serif;
-  font-size: 8pt;
-  font-style: italic;  
-  color: #000000;
-  background: #eeffcc;
-  font-weight: normal;
 }
 #wrap {
   width: 340px;
