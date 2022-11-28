@@ -66,6 +66,14 @@ The demo includes the following client-side functionalities:
 
 <!-- START DESCRIPTION lightstreamer-example-portfolio-client-javascript-jsonpatch-portfolio-demo---html-client -->
 
+### Live Demo
+
+[![screenshot](screen_jsonpatchportfolio_large.png)](https://demos.lightstreamer.com/PortfolioDemo_JSONPatch/)
+
+### [![](http://demos.lightstreamer.com/site/img/play.png) View live demo](https://demos.lightstreamer.com/PortfolioDemo_JSONPatch/)
+
+*Note. Real-Time simulated Portfolio data is received from the Lightstreamer Server deployed at [http://push.lightstreamer.com](http://push.lightstreamer.com).*
+
 ### Details
 
 This demo application is similar to the [Basic Portfolio Demo](https://github.com/Lightstreamer/Lightstreamer-example-Portfolio-client-javascript#basic-portfolio-demo---html-client), but the portfolio contents are received in JSON format and displayed as a tree.
