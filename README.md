@@ -189,5 +189,5 @@ If you want to install the *Dynamic Drop-Down Demo*, pointing to your local Ligh
 
 ## Lightstreamer Compatibility Notes
 
-- Compatible with Lightstreamer JavaScript Client library version 6.0 or newer.
+- Compatible with Lightstreamer JavaScript Client library version 6.0 or newer (installation instructions for version 8.0 or newer).
 - As an exception, the JSON Patch demo is compatible with Lightstreamer JavaScript Client library version 8.2 beta or newer.
