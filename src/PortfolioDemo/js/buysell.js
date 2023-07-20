@@ -120,8 +120,8 @@ function submitForm(op) {
       onError: function(originalMex) {
         fillOrdersTable(prog, op, portfolioId, name, qtyN, "ERROR");
       },
-      onProcessed: function(originalMex) {
-        fillOrdersTable(prog, op, portfolioId, name, qtyN, "PROCESSED");
+      onProcessed: function(originalMex, response) {
+        fillOrdersTable(prog, op, portfolioId, name, qtyN, response);
       }
     });
   }

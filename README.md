@@ -53,11 +53,11 @@ The columns show: stock name, last price, quantity (number of stocks in the port
 The portfolio content is the same as the [Basic Portfolio Demo](https://github.com/Lightstreamer/Lightstreamer-example-Portfolio-client-javascript#basic-portfolio-demo---html-client) (i.e., it subscribes to the same item from the same Data Adapter) and it is shared among all the connected users. Again, you can connect to this demo from different machines and see your operations propagated everywhere.
 The front-end code can be considered a reference example of item subscriptions in COMMAND mode with "two-level push".
 
-Compared to the [Basic Portfolio Demo](https://github.com/Lightstreamer/Lightstreamer-example-Portfolio-client-javascript#basic-portfolio-demo---html-client) a panel has been added to display information about the submission of orders. It displays your orders only and not those submitted by other connected users. The columns show: progressive number of order, stock name, type of order (buy or sell), quantity, and status of order (SUBMITTING, PROCESSED, ABORT, DENY, DISCARDED, ERROR).
+Compared to the [Basic Portfolio Demo](https://github.com/Lightstreamer/Lightstreamer-example-Portfolio-client-javascript#basic-portfolio-demo---html-client) a panel has been added to display information about the submission of orders. It displays your orders only and not those submitted by other connected users. The columns show: progressive number of order, stock name, type of order (buy or sell), quantity, and status of order (initially SUBMITTING, then determined by the outcome of the sendMessage request: SUBMITTED, ABORT, DENY, DISCARDED, ERROR).
 
 The demo includes the following client-side functionalities:
 * A [Subscription](https://lightstreamer.com/api/ls-web-client/latest/Subscription.html) containing 1 item, subscribed to in <b>COMMAND</b> mode feeding a [DynaGrid](https://lightstreamer.com/api/ls-web-client/latest/DynaGrid.html). Each added row automatically provokes an underlying subscription to a sub-item in <b>MERGE</b> mode, to get the real-time price for that specific stock from another feed (the same as the [Stock-List Demos](https://github.com/Lightstreamer/Lightstreamer-example-Stocklist-client-javascript)). When a row is deleted, the underlying sub-item is automatically unsubscribed from.
-* The order submission is done by sending a message directly to Lightstreamer Server using the [LightstreamerClient.sendMessage](https://lightstreamer.com/api/ls-web-client/latest/LightstreamerClient.html#sendMessage) utility.
+* The order submission is done by sending a message directly to Lightstreamer Server using the [LightstreamerClient.sendMessage](https://lightstreamer.com/api/ls-web-client/latest/LightstreamerClient.html#sendMessage) utility. A confirmation response is received from the Metadata Adapter (either an error or the "SUBMITTED" message).
 * A [DynaGrid](https://lightstreamer.com/api/ls-web-client/latest/DynaGrid.html) is fed dynamically with one row for each sendMessage invocation and updated via an appropriate [ClientMessageListener](https://lightstreamer.com/api/ls-web-client/latest/ClientMessageListener.html).
 
 <!-- END DESCRIPTION lightstreamer-example-portfolio-client-javascript-portfolio-demo---html-client -->
@@ -189,5 +189,6 @@ If you want to install the *Dynamic Drop-Down Demo*, pointing to your local Ligh
 
 ## Lightstreamer Compatibility Notes
 
-- Compatible with Lightstreamer JavaScript Client library version 6.0 or newer (installation instructions for version 8.0 or newer).
-- As an exception, the JSON Patch demo is compatible with Lightstreamer JavaScript Client library version 8.2 beta or newer.
+* Compatible with Lightstreamer SDK for Web Clients version 9.0.0 or newer.
+* For a version of this example compatible with Lightstreamer SDK for Web Clients version 6.0 to 8.0, please refer to [this tag](https://github.com/Lightstreamer/Lightstreamer-example-Portfolio-client-javascript/releases/tag/last_without_JSONPatch_demo).
+
